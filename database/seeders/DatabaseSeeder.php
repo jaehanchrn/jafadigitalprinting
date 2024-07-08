@@ -12,8 +12,9 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
+        $username = 'jaehanchrn';
 
-        \App\Models\User::factory()->create([
+        \App\Models\User::create([
             'namalengkap' => 'Almiranda',
             'nomor_telepon' => '62895804560813',
             'tipe_akun' => 'Admin',
@@ -21,7 +22,7 @@ class DatabaseSeeder extends Seeder
             'password' => 'tes12345',
         ]);
 
-        \App\Models\User::factory()->create([
+        \App\Models\User::create([
             'namalengkap' => 'Fauzan',
             'nomor_telepon' => '6287878787878',
             'tipe_akun' => 'User',
@@ -37,3 +38,6 @@ class DatabaseSeeder extends Seeder
     }
     
 }
+
+// factory()->
+// factory()->
