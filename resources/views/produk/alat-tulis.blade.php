@@ -142,7 +142,8 @@
                                         @csrf
                                         <input type="hidden" name="product_id" value="{{ $product->id }}">
                                         <img class="w-72 h-fit rounded-tr-lg rounded-tl-lg"
-                                            src="{{ url($product->image) }}" alt="{{ $product->name }}" />
+                                            src="{{ asset($product->image) }}" alt="{{ $product->name }}">
+
                                         <div class="w-72 py-6 bg-neutral-100 px-6 ">
                                             <div
                                                 class="w-full text-blue-500 text-xl font-bold font-['Montserrat'] pb-2">
