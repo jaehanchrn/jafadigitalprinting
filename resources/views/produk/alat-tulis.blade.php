@@ -142,12 +142,13 @@
                                         @csrf
                                         <input type="hidden" name="product_id" value="{{ $product->id }}">
                                         <img class="w-72 h-fit rounded-tr-lg rounded-tl-lg"
-                                            src="{{ $product->image }}" alt="{{ $product->name }}" />
+                                            src="{{ url($product->image) }}" alt="{{ $product->name }}" />
                                         <div class="w-72 py-6 bg-neutral-100 px-6 ">
                                             <div
                                                 class="w-full text-blue-500 text-xl font-bold font-['Montserrat'] pb-2">
                                                 {{ $product->name }}</div>
-                                            <div class="w-full text-blue-300 text-l font-bold font-['Montserrat'] pb-2">Rp
+                                            <div class="w-full text-blue-300 text-l font-bold font-['Montserrat'] pb-2">
+                                                Rp
                                                 {{ number_format($product->price, 0, ',', '.') }}/pack</div>
                                             <div
                                                 class="w-full text-center font-normal text-neutral-800 font-['Montserrat'] text-sm flex flex-row gap-4 items-center">
@@ -172,27 +173,28 @@
                         <button class="rounded-[10px] justify-center items-center gap-2.5 inline-flex">
                             <div
                                 class="text-center text-blue-500 text-l hover:opacity-50 font-normal font-['Montserrat'] underline">
-                                sebelumnya </button>
-                                    <div class="rounded-[10px] justify-center items-center gap-2.5 inline-flex">
-                                        <div class="text-center text-neutral-800 text-xl font-bold font-['Montserrat']">
-                                            (1/20)</div>
-                                    </div>
-                                    <button class="rounded-[10px] justify-center items-center gap-2.5 inline-flex">
-                                        <div
-                                            class="text-center text-blue-500 text-l hover:opacity-50 font-normal font-['Montserrat'] underline">
-                                            selanjutnya</div>
-                                    </button>
-                            </div>
+                                sebelumnya
+                        </button>
+                        <div class="rounded-[10px] justify-center items-center gap-2.5 inline-flex">
+                            <div class="text-center text-neutral-800 text-xl font-bold font-['Montserrat']">
+                                (1/20)</div>
+                        </div>
+                        <button class="rounded-[10px] justify-center items-center gap-2.5 inline-flex">
+                            <div
+                                class="text-center text-blue-500 text-l hover:opacity-50 font-normal font-['Montserrat'] underline">
+                                selanjutnya</div>
+                        </button>
                     </div>
-
                 </div>
 
             </div>
 
         </div>
 
-        <!-- FOOTER -->
-        @include('partials.footer')
+    </div>
+
+    <!-- FOOTER -->
+    @include('partials.footer')
     </div>
 
 
