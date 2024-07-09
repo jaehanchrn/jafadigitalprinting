@@ -20,133 +20,133 @@ class ProductSeeder extends Seeder
                 'name' => 'Pulpen Standard AE7 Hitam (12 pcs)',
                 // 'description' => 'Durable and strong transparent tape.',
                 'price' => 22000,
-                'image' => asset('pictures/alat-tulis/pulpen-standard-hitam.jpg',)
+                'image' => url('pictures/alat-tulis/pulpen-standard-hitam.jpg'),
             ],
             [
                 'name' => 'Pulpen Standard AE7 Biru (12 pcs)',
                 // 'description' => 'Durable and strong transparent tape.',
                 'price' => 22000,
-                'image' => asset('pictures/alat-tulis/pulpen-standard-biru.jpg',)
+                'image' => url('pictures/alat-tulis/pulpen-standard-biru.jpg',)
             ],
             [
                 'name' => 'Pulpen Standard AE7 Merah (12 pcs)',
                 // 'description' => 'Durable and strong transparent tape.',
                 'price' => 22000,
-                'image' => asset('pictures/alat-tulis/pulpen-standard-merah.jpg',)
+                'image' => url('pictures/alat-tulis/pulpen-standard-merah.jpg',)
             ],
 
             [
                 'name' => 'Pulpen Kenko Gel Pen K-1 Hitam (12 pcs)',
                 // 'description' => 'Durable and strong transparent tape.',
                 'price' => 54000,
-                'image' => asset('pictures/alat-tulis/pulpen-kenko-k1.jpg',)
+                'image' => url('pictures/alat-tulis/pulpen-kenko-k1.jpg',)
             ],
             [
                 'name' => 'Buku Sinar Dunia 58halaman (10 pcs)',
                 // 'description' => 'Durable and strong transparent tape.',
                 'price' => 40000,
-                'image' => asset('pictures/alat-tulis/buku-sidu-58.jpg',)
+                'image' => url('pictures/alat-tulis/buku-sidu-58.jpg',)
             ],
             [
                 'name' => 'Buku Sinar Dunia 38halaman (10 pcs)',
                 // 'description' => 'Durable and strong transparent tape.',
                 'price' => 35000,
-                'image' => asset('pictures/alat-tulis/buku-sidu-38.jpg',)
+                'image' => url('pictures/alat-tulis/buku-sidu-38.jpg',)
             ],
            
             [
                 'name' => 'Buku Folio Bergaris 100halaman (5 pcs)',
                 // 'description' => 'Durable and strong transparent tape.',
                 'price' => 90000,
-                'image' => asset('pictures/alat-tulis/buku-folio.jpg',)
+                'image' => url('pictures/alat-tulis/buku-folio.jpg',)
             ],
             [
                 'name' => 'Tipex Kertas Joyko (10 pcs)',
                 // 'description' => 'Durable and strong transparent tape.',
                 'price' => 70000,
-                'image' => asset('pictures/alat-tulis/tipex-kertas-joyko.jpg',)
+                'image' => url('pictures/alat-tulis/tipex-kertas-joyko.jpg',)
             ],
             [
                 'name' => 'Kertas A4 70gsm (500pcs)',
                 // 'description' => 'Durable and strong transparent tape.',
                 'price' => 53000,
-                'image' => asset('pictures/alat-tulis/kertas-a4-70gsm.jpg',)
+                'image' => url('pictures/alat-tulis/kertas-a4-70gsm.jpg',)
             ],
 
             [
                 'name' => 'Kertas F4 70gsm (500pcs)',
                 // 'description' => 'Durable and strong transparent tape.',
                 'price' => 57000,
-                'image' => asset('pictures/alat-tulis/kertas-f4-70gsm.jpg',)
+                'image' => url('pictures/alat-tulis/kertas-f4-70gsm.jpg',)
             ],
             [
                 'name' => 'Photo Paper Glossy 120gsm (20pcs)',
                 // 'description' => 'Durable and strong transparent tape.',
                 'price' => 35000,
-                'image' => asset('pictures/alat-tulis/kertas-photo.jpg',)
+                'image' => url('pictures/alat-tulis/kertas-photo.jpg',)
             ],
             [
                 'name' => 'Lakban Bening Daimaru 2 Inch (6 pcs)',
                 // 'description' => 'Durable and strong transparent tape.',
                 'price' => 66000,
-                'image' => asset('pictures/alat-tulis/lakban-bening-2inch.jpg',)
+                'image' => url('pictures/alat-tulis/lakban-bening-2inch.jpg',)
             ],
 
             [
                 'name' => 'Lakban Bening Daimaru 1 Inch (6 pcs)',
                 // 'description' => 'Durable and strong transparent tape.',
                 'price' => 54000,
-                'image' => asset('pictures/alat-tulis/lakban-bening-1inch.jpg',)
+                'image' => url('pictures/alat-tulis/lakban-bening-1inch.jpg',)
             ],
             [
                 'name' => 'Map Kertas Biola (25 pcs) warna merah',
                 // 'description' => 'Durable and strong transparent tape.',
                 'price' => 45000,
-                'image' => asset('pictures/alat-tulis/map-biola.jpg',)
+                'image' => url('pictures/alat-tulis/map-biola.jpg',)
             ],
             [
                 'name' => 'Map Kertas Biola (25 pcs) warna biru',
                 // 'description' => 'Durable and strong transparent tape.',
                 'price' => 45000,
-                'image' => asset('pictures/alat-tulis/map-biola.jpg',)
+                'image' => url('pictures/alat-tulis/map-biola.jpg',)
             ],
 
             [
                 'name' => 'Map Kertas Biola (25 pcs) warna hijau',
                 // 'description' => 'Durable and strong transparent tape.',
                 'price' => 45000,
-                'image' => asset('pictures/alat-tulis/map-biola.jpg',)
+                'image' => url('pictures/alat-tulis/map-biola.jpg',)
             ],
             [
                 'name' => 'Kwitansi Paperline 32x10cm (10 pcs)',
                 // 'description' => 'Durable and strong transparent tape.',
                 'price' => 48000,
-                'image' => asset('pictures/alat-tulis/kwitansi-besar.jpg',)
+                'image' => url('pictures/alat-tulis/kwitansi-besar.jpg',)
             ],
             [
                 'name' => 'Kwitansi Paperline 28x9cm (10 pcs)',
                 // 'description' => 'Durable and strong transparent tape.',
                 'price' => 42000,
-                'image' => asset('pictures/alat-tulis/kwitansi-kecil.jpg',)
+                'image' => url('pictures/alat-tulis/kwitansi-kecil.jpg',)
             ],
 
             [
                 'name' => 'Amplop Putih Paperline 23x11cm',
                 // 'description' => 'Durable and strong transparent tape.',
                 'price' => 20000,
-                'image' => asset('pictures/alat-tulis/amplop-putih-besar.jpg',)
+                'image' => url('pictures/alat-tulis/amplop-putih-besar.jpg',)
             ],
             [
                 'name' => 'Amplop Putih Paperline 11,2x9,5cm',
                 // 'description' => 'Durable and strong transparent tape.',
                 'price' => 18000,
-                'image' => asset('pictures/alat-tulis/amplop-putih-kecil.jpg',)
+                'image' => url('pictures/alat-tulis/amplop-putih-kecil.jpg',)
             ],
             [
                 'name' => 'Crayon Titi Kecil 12 Warna',
                 // 'description' => 'Durable and strong transparent tape.',
                 'price' => 18000,
-                'image' => asset('pictures/alat-tulis/krayon-titi-12.jpg',)
+                'image' => url('pictures/alat-tulis/krayon-titi-12.jpg',)
             ],
         ]);
     }
