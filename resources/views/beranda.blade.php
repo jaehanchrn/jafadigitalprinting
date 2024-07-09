@@ -298,7 +298,7 @@
                         class="w-72 h-fit relative flex flex-col shadow-md shadow-neutral-300 rounded-xl justify-between">
 
                         <img class="w-72 h-full  rounded-tl-xl rounded-tr-xl"
-                            src="{{ url('pictures/jasa-cetak/cetak-photo.jpg') }}" />
+                            src="{{ url('pictures/alat-tulis/pulpen-standard-hitam.jpg') }}" />
                         <div class="w-72 py-6 bg-blue-500 shadow-md shadow-neutral-400 px-6 rounded-br-xl rounded-bl-xl">
                             <div class="w-full   text-neutral-100 text-xl font-bold font-['Montserrat']">Pulpen Standard AE7 Hitam (12 pcs)</div>
                             <div class="w-full  text-blue-100 font-normal font-['Montserrat']">Rp
@@ -309,7 +309,7 @@
                         class="w-72 h-fit relative flex flex-col shadow-md shadow-neutral-300 rounded-xl justify-between">
 
                         <img class="w-72 h-full  rounded-tl-xl rounded-tr-xl"
-                            src="{{ url('pictures/jasa-cetak/cetak-photo.jpg') }}" />
+                            src="{{ url('pictures/alat-tulis/pulpen-standard-biru.jpg') }}" />
                         <div class="w-72 py-6 bg-blue-500 shadow-md shadow-neutral-400 px-6 rounded-br-xl rounded-bl-xl">
                             <div class="w-full   text-neutral-100 text-xl font-bold font-['Montserrat']">Pulpen Standard AE7 Biru (12 pcs)</div>
                             <div class="w-full  text-blue-100 font-normal font-['Montserrat']">Rp
@@ -320,7 +320,7 @@
                         class="w-72 h-fit relative flex flex-col shadow-md shadow-neutral-300 rounded-xl justify-between">
 
                         <img class="w-72 h-full  rounded-tl-xl rounded-tr-xl"
-                            src="{{ url('pictures/jasa-cetak/cetak-photo.jpg') }}" />
+                            src="{{ url('pictures/alat-tulis/pulpen-standard-merah.jpg') }}" />
                         <div class="w-72 py-6 bg-blue-500 shadow-md shadow-neutral-400 px-6 rounded-br-xl rounded-bl-xl">
                             <div class="w-full   text-neutral-100 text-xl font-bold font-['Montserrat']">Pulpen Standard AE7 Merah (12 pcs)</div>
                             <div class="w-full  text-blue-100 font-normal font-['Montserrat']">Rp
@@ -334,7 +334,7 @@
                         class="w-72 h-fit relative flex flex-col shadow-md shadow-neutral-300 rounded-xl justify-between">
 
                         <img class="w-72 h-full  rounded-tl-xl rounded-tr-xl"
-                            src="{{ url('pictures/jasa-cetak/cetak-photo.jpg') }}" />
+                            src="{{ url('pictures/alat-tulis/pulpen-kenko-k1.jpg') }}" />
                         <div class="w-72 py-6 bg-blue-500 shadow-md shadow-neutral-400 px-6 rounded-br-xl rounded-bl-xl">
                             <div class="w-full   text-neutral-100 text-xl font-bold font-['Montserrat']">Pulpen Kenko Gel Pen K-1 Hitam (12 pcs)</div>
                             <div class="w-full  text-blue-100 font-normal font-['Montserrat']">Rp
@@ -345,7 +345,7 @@
                         class="w-72 h-fit relative flex flex-col shadow-md shadow-neutral-300 rounded-xl justify-between">
 
                         <img class="w-72 h-full  rounded-tl-xl rounded-tr-xl"
-                            src="{{ url('pictures/jasa-cetak/cetak-photo.jpg') }}" />
+                            src="{{ url('pictures/alat-tulis/buku-sidu-58.jpg') }}" />
                         <div class="w-72 py-6 bg-blue-500 shadow-md shadow-neutral-400 px-6 rounded-br-xl rounded-bl-xl">
                             <div class="w-full   text-neutral-100 text-xl font-bold font-['Montserrat']">Buku Sinar Dunia 58halaman (10 pcs) </div>
                             <div class="w-full  text-blue-100 font-normal font-['Montserrat']">Rp
@@ -356,7 +356,7 @@
                         class="w-72 h-fit relative flex flex-col shadow-md shadow-neutral-300 rounded-xl justify-between">
 
                         <img class="w-72 h-full  rounded-tl-xl rounded-tr-xl"
-                            src="{{ url('pictures/jasa-cetak/cetak-photo.jpg') }}" />
+                            src="{{ url('pictures/alat-tulis/buku-sidu-38.jpg') }}" />
                         <div class="w-72 py-6 bg-blue-500 shadow-md shadow-neutral-400 px-6 rounded-br-xl rounded-bl-xl">
                             <div class="w-full   text-neutral-100 text-xl font-bold font-['Montserrat']">Buku Sinar Dunia 38halaman (10 pcs) </div>
                             <div class="w-full  text-blue-100 font-normal font-['Montserrat']">Rp
