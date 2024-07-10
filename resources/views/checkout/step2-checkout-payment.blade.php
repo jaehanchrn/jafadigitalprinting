@@ -33,9 +33,11 @@
                                 enctype="multipart/form-data">
                                 @csrf
 
-                                <div class="w-full text-neutral-800 text-2xl font-bold pb-6">UPLOAD BUKTI PEMBAYARAN</div>
-
-
+                                <div class="w-full text-neutral-800 text-2xl font-bold pb-2">UPLOAD BUKTI PEMBAYARAN</div>
+                                <div class="w-[500px] text-neutral-800 text-xl font-normal pb-4"> => Silahkan Transfer
+                                    sesuai
+                                    nominal <a class="font-bold">Total Harga Keseluruhan</a> ke nomor rekening
+                                    (042101082518506) a/n Almiranda Jaihan Chairani</div>
                                 <div
                                     class="w-[500px] py-6 px-8 self-stretch relative justify-start items-start flex flex-col rounded-lg  bg-neutral-200">
                                     <!-- Payment proof upload field -->
@@ -84,8 +86,8 @@
                                     <!-- Submit button -->
                                     <div class="w-full flex justify-end">
                                         <button type="submit"
-                                            class="font-bold text-neutral-50 hover:opacity-80 font-['Montserrat'] px-6 py-2 rounded-md bg-blue-500 ">Confirm
-                                            Payment</button>
+                                            class="font-bold text-neutral-50 hover:opacity-80 font-['Montserrat'] px-6 py-2 rounded-md bg-blue-500 ">Konfirmasi
+                                            Pembayaran</button>
                                     </div>
                                 </div>
                             </form>
