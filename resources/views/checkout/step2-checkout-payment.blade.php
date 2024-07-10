@@ -41,7 +41,7 @@
                                 <div
                                     class="w-[500px] py-6 px-8 self-stretch relative justify-start items-start flex flex-col rounded-lg  bg-neutral-200">
                                     <!-- Payment proof upload field -->
-                                    <input type="file" name="payment_proof" class="pb-4">
+                                    <input type="file" name="payment_proof" class=""> <a class="text-sm text-red-500 font-normal italic pb-4">*maksimal 2mb</a>
                                     <input type="hidden" name="user_id" value="{{ auth()->user()->id }}">
                                     <input type="hidden" name="total_price_product" value="{{ $total_price_product }}">
                                     <input type="hidden" name="shipping_cost" value="{{ $shipping_cost }}">
