@@ -9,7 +9,7 @@
             <div class="w-full justify-start px-12">
                 <div class="w-full flex-col flex justify-center items-start relative">
                     <div class="w-[600px] h-[95px] items-center flex bg-blue-500 rounded-tl-2xl rounded-tr-2xl">
-                        <div class="pl-12 absolute text-neutral-50 text-[40px] font-normal font-['Montserrat']">
+                        <div class="pl-12 absolute text-gray-50 text-[40px] font-normal font-['Montserrat']">
                             Pembayaran
                         </div>
                     </div>
@@ -33,13 +33,13 @@
                                 enctype="multipart/form-data">
                                 @csrf
 
-                                <div class="w-full text-neutral-800 text-2xl font-bold pb-2">UPLOAD BUKTI PEMBAYARAN</div>
-                                <div class="w-[500px] text-neutral-800 text-xl font-normal pb-4"> => Silahkan Transfer
+                                <div class="w-full text-gray-800 text-2xl font-bold pb-2">UPLOAD BUKTI PEMBAYARAN</div>
+                                <div class="w-[500px] text-gray-800 text-xl font-normal pb-4"> => Silahkan Transfer
                                     sesuai
                                     nominal <a class="font-bold">Total Harga Keseluruhan</a> ke nomor rekening
                                     (042101082518506) a/n Almiranda Jaihan Chairani</div>
                                 <div
-                                    class="w-[500px] py-6 px-8 self-stretch relative justify-start items-start flex flex-col rounded-lg  bg-neutral-200">
+                                    class="w-[500px] py-6 px-8 self-stretch relative justify-start items-start flex flex-col rounded-lg  bg-gray-200">
                                     <!-- Payment proof upload field -->
                                     <input type="file" name="payment_proof" class=""> <a class="text-sm text-red-500 font-normal italic pb-4">*maksimal 2mb</a>
                                     <input type="hidden" name="user_id" value="{{ auth()->user()->id }}">
@@ -65,7 +65,7 @@
 
                                     <!-- Display payment form fields -->
                                     <div class="w-full flex justify-between">
-                                        <div class="text-xl font-bold text-neutral-800 font-['montserrat']">
+                                        <div class="text-xl font-bold text-gray-800 font-['montserrat']">
                                             Ongkos Kirim
                                         </div>
                                         <div class="text-xl font-bold text-blue-400 font-['montserrat']">
@@ -74,7 +74,7 @@
                                         </div>
                                     </div>
                                     <div class="w-full flex justify-between pb-4">
-                                        <div class="text-xl font-bold text-neutral-800 font-['montserrat']">
+                                        <div class="text-xl font-bold text-gray-800 font-['montserrat']">
                                             Total Harga Keseluruhan
                                         </div>
                                         <div class="text-xl font-bold text-blue-400 font-['montserrat']">
@@ -86,7 +86,7 @@
                                     <!-- Submit button -->
                                     <div class="w-full flex justify-end">
                                         <button type="submit"
-                                            class="font-bold text-neutral-50 hover:opacity-80 font-['Montserrat'] px-6 py-2 rounded-md bg-blue-500 ">Konfirmasi
+                                            class="font-bold text-gray-50 hover:opacity-80 font-['Montserrat'] px-6 py-2 rounded-md bg-blue-500 ">Konfirmasi
                                             Pembayaran</button>
                                     </div>
                                 </div>

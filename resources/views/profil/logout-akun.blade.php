@@ -49,26 +49,26 @@
                     <div class="w-full">
                         <div class="w-full justify-start items-start flex-col flex gap-9 pr-60">
                             <div
-                                class=" justify-start items-start text-neutral-800 text-6xl font-normal font-['Montserrat']  ">
+                                class=" justify-start items-start text-gray-800 text-6xl font-normal font-['Montserrat']  ">
                                 LOGOUT
                             </div>
 
 
                             <div class="w-full  justify-start items-start flex">
-                                <div class="w-full rounded-full border-2 border-neutral-300  items-start inline-flex">
+                                <div class="w-full rounded-full border-2 border-gray-300  items-start inline-flex">
                                 </div>
                             </div>
 
                             <div class="w-full justify-start items-start flex-col flex gap-4 ">
                                 <div
-                                    class="justify-start items-start text-neutral-800 text-2xl font-normal font-['Montserrat'] ">
+                                    class="justify-start items-start text-gray-800 text-2xl font-normal font-['Montserrat'] ">
                                     Anda yakin ingin keluar akun?
                                 </div>
                                 <form action="{{ route('auth.keluar.logout') }}" method="POST">
                                     @csrf
                                     <button type="submit"
                                         class="px-5 py-3  bg-blue-500 rounded-[10px] inline-flex hover:opacity-75">
-                                        <div class=" text-neutral-100 text-xl font-normal font-['Montserrat']">
+                                        <div class=" text-gray-100 text-xl font-normal font-['Montserrat']">
                                             Yakin
                                         </div>
                                     </button>

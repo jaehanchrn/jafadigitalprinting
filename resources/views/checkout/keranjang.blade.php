@@ -27,7 +27,7 @@
             <div class="w-full justify-start px-12">
                 <div class="w-full flex-col flex justify-center items-start  relative ">
                     <div class="w-[600px] h-[95px] items-center flex bg-blue-500 rounded-tl-2xl rounded-tr-2xl">
-                        <div class="pl-12 absolute text-neutral-50 text-[40px] font-normal font-['Montserrat']">
+                        <div class="pl-12 absolute text-gray-50 text-[40px] font-normal font-['Montserrat']">
                             Keranjang Pesanan
                         </div>
                     </div>
@@ -37,7 +37,7 @@
             <div class="w-full justify-start items-start inline-flex py-8 px-24">
                 <div>
                     <span class="text-yellow-500 text-xl font-semibold font-['Montserrat']">1. Keranjang Pesanan</span>
-                    <span class="text-neutral-300 text-xl font-semibold font-['Montserrat']"> >> 2. Alamat Penerima >>
+                    <span class="text-gray-300 text-xl font-semibold font-['Montserrat']"> >> 2. Alamat Penerima >>
                         3. Pembayaran</span>
                 </div>
             </div>
@@ -80,15 +80,15 @@
                                         <!-- Bagian Harga, Jumlah, dan Total Harga -->
                                         <div class="flex flex-col">
                                             <!-- Harga -->
-                                            <div class="text-xl text-neutral-800 font-normal font-['montserrat']">
+                                            <div class="text-xl text-gray-800 font-normal font-['montserrat']">
                                                 Harga : Rp {{ number_format($item->product->price, 0, ',', '.') }}
                                             </div>
                                             <!-- Jumlah -->
-                                            <div class="text-xl text-neutral-800 font-normal font-['montserrat']">
+                                            <div class="text-xl text-gray-800 font-normal font-['montserrat']">
                                                 Jumlah : {{ $item->quantity }}
                                             </div>
                                             <!-- Total Harga -->
-                                            <div class="text-xl text-neutral-800 font-normal font-['montserrat']">
+                                            <div class="text-xl text-gray-800 font-normal font-['montserrat']">
                                                 Total Harga Pesanan : Rp
                                                 {{ number_format($item->product->price * $item->quantity, 0, ',', '.') }}
                                             </div>
@@ -105,7 +105,7 @@
             @else
                 <div class="relative w-full px-12 pb-8 ">
                     <div
-                        class="relative text-neutral-500 text-2xl font-normal font-['Montserrat'] border-2 border-neutral-300 rounded-xl flex-col inline-flex p-8 w-full text-justify">
+                        class="relative text-gray-500 text-2xl font-normal font-['Montserrat'] border-2 border-gray-300 rounded-xl flex-col inline-flex p-8 w-full text-justify">
                         Mohon maaf, belum ada produk atau jasa yang ditambahkan.
                     </div>
                 </div>
@@ -115,10 +115,10 @@
             <div class="w-fit flex px-12">
                 <div class="w-full h-fit bg-orange-500 justify-end items-end flex flex-row py-4 px-12 gap-16">
                     <div class="w-fit relative items-start flex flex-col">
-                        <div class="w-full flex text-neutral-50 text-2xl font-bold font-['Montserrat']">Total Harga</div>
+                        <div class="w-full flex text-gray-50 text-2xl font-bold font-['Montserrat']">Total Harga</div>
                     </div>
                     <div class="w-fit relative items-start flex flex-col">
-                        <div class="w-full text-neutral-50 text-2xl font-bold font-['Montserrat']"> Rp
+                        <div class="w-full text-gray-50 text-2xl font-bold font-['Montserrat']"> Rp
                             {{ number_format($total_price_product, 0, ',', '.') }}</div>
                     </div>
                 </div>
@@ -127,13 +127,13 @@
             <div class="w-full h-fit flex flex-col justify-between px-12">
                 <div class="w-full gap-6 justify-end items-center flex pt-12">
                     <button onclick="window.location.href='/beranda'"
-                        class="px-7 py-4 gap-4 bg-neutral-50 rounded-[10px] border-2 border-blue-500 inline-flex hover:opacity-75">
+                        class="px-7 py-4 gap-4 bg-gray-50 rounded-[10px] border-2 border-blue-500 inline-flex hover:opacity-75">
                         <div class="text-center text-blue-500 text-2xl font-bold font-['Montserrat']">Tambah Pesanan
                         </div>
                     </button>
                     <a href="{{ route('checkout.address.index') }}"
                         class="px-7 py-4 bg-blue-500 rounded-[10px] inline-flex hover:opacity-75">
-                        <div class="text-neutral-100 text-2xl font-normal font-['Montserrat']">Selanjutnya</div>
+                        <div class="text-gray-100 text-2xl font-normal font-['Montserrat']">Selanjutnya</div>
                     </a>
                 </div>
             </div>

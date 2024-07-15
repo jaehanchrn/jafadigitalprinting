@@ -25,11 +25,11 @@
         <div class="w-full flex-col justify-center items-center flex py-16">
             <div class="w-[1000px] h-fit flex-col flex items-center relative  gap-20">
                 <div class="w-full flex-col flex justify-center items-center">
-                    <div class="text-center text-neutral-800 text-[64px] font-normal font-['Montserrat']">Peralatan
+                    <div class="text-center text-gray-800 text-[64px] font-normal font-['Montserrat']">Peralatan
                         Tulis
                         dan
                         Kantor</div>
-                    <div class=" text-center text-neutral-500 text-xl font-normal font-['Montserrat']">Anda butuh
+                    <div class=" text-center text-gray-500 text-xl font-normal font-['Montserrat']">Anda butuh
                         peralatan
                         tulis dan berbagai kebutuhan untuk kantor? Anda berada di tempat yang tepat! Harga dijamin
                         terjangkau untuk anda yang ingin membeli dalam jumlah yang banyak. Ingat kami hanya menjual
@@ -42,15 +42,15 @@
             <div class="w-full h-fit flex flex-row py-20 justify-between px-12">
                 <div class=" flex-col inline-flex">
                     <div class="w-[600px] p-5 bg-blue-500 rounded-full justify-between items-start inline-flex">
-                        <div class="text-neutral-50 text-2xl font-normal font-['Montserrat']">Mau cari produk apa?
+                        <div class="text-gray-50 text-2xl font-normal font-['Montserrat']">Mau cari produk apa?
                         </div>
-                        <i class="ph-bold ph-magnifying-glass text-neutral-50 text-3xl"></i>
+                        <i class="ph-bold ph-magnifying-glass text-gray-50 text-3xl"></i>
                     </div>
                 </div>
 
                 <div class=" flex-col inline-flex">
                     <button
-                        class="w-[400px] p-5 bg-neutral-50 rounded-2xl border border-blue-500 justify-between items-start inline-flex">
+                        class="w-[400px] p-5 bg-gray-50 rounded-2xl border border-blue-500 justify-between items-start inline-flex">
                         <div class="text-blue-500 text-2xl font-normal font-['Montserrat']">Filter by
                         </div>
                         <i class="ph-fill ph-caret-down text-blue-500 text-3xl"></i>
@@ -68,7 +68,7 @@
                             <div class="w-full flex-col flex">
 
                                 <div
-                                    class="justify-center items-center flex-col flex text-neutral-50 bg-blue-500 rounded-tl-2xl rounded-tr-2xl py-6 text-[40px] font-normal font-['Montserrat']">
+                                    class="justify-center items-center flex-col flex text-gray-50 bg-blue-500 rounded-tl-2xl rounded-tr-2xl py-6 text-[40px] font-normal font-['Montserrat']">
                                     Kategori Produk</div>
 
                                 <div class="w-full p-8">
@@ -137,13 +137,13 @@
                         <div class="basis-0 justify-center items-start gap-[30px] flex flex-wrap">
                             @foreach ($products as $product)
                                 <div
-                                    class="w-72 h-fit relative flex flex-col shadow-md shadow-neutral-400 rounded-lg  justify-between ">
+                                    class="w-72 h-fit relative flex flex-col shadow-md shadow-gray-400 rounded-lg  justify-between ">
                                     <form action="{{ route('cart.addToCart', ['id' => $product->id]) }}" method="POST">
                                         @csrf
                                         <input type="hidden" name="product_id" value="{{ $product->id }}">
                                         <img class="w-72 h-fit rounded-tr-lg rounded-tl-lg"
                                             src="{{ url($product->image) }}" alt="{{ $product->name }}">
-                                        <div class="w-72 py-6 bg-neutral-100 px-6 ">
+                                        <div class="w-72 py-6 bg-gray-100 px-6 ">
                                             <div
                                                 class="w-full text-blue-500 text-xl font-bold font-['Montserrat'] pb-2">
                                                 {{ $product->name }}</div>
@@ -151,16 +151,16 @@
                                                 Rp
                                                 {{ number_format($product->price, 0, ',', '.') }}/pack</div>
                                             <div
-                                                class="w-full text-center font-normal text-neutral-800 font-['Montserrat'] text-sm flex flex-row gap-4 items-center">
+                                                class="w-full text-center font-normal text-gray-800 font-['Montserrat'] text-sm flex flex-row gap-4 items-center">
                                                 Jumlah
                                                 <input type="number" name="quantity" id="quantity"
-                                                    class="w-full font-bold font-['Montserrat'] py-1 text-l text-neutral-800 border-blue-500 border-2 bg-neutral-50 text-center rounded mt-1 "
+                                                    class="w-full font-bold font-['Montserrat'] py-1 text-l text-gray-800 border-blue-500 border-2 bg-gray-50 text-center rounded mt-1 "
                                                     min="1" value="1" required>
                                             </div>
                                         </div>
 
                                         <button type="submit"
-                                            class="w-72 h-fit py-2 hover:opacity-80 bg-blue-500 text-neutral-50 font-normal font-['Montserrat'] rounded-bl-lg rounded-br-lg justify-center items-center flex">
+                                            class="w-72 h-fit py-2 hover:opacity-80 bg-blue-500 text-gray-50 font-normal font-['Montserrat'] rounded-bl-lg rounded-br-lg justify-center items-center flex">
                                             Tambah ke Keranjang
                                         </button>
                                     </form>
@@ -176,7 +176,7 @@
                                 sebelumnya
                         </button>
                         <div class="rounded-[10px] justify-center items-center gap-2.5 inline-flex">
-                            <div class="text-center text-neutral-800 text-xl font-bold font-['Montserrat']">
+                            <div class="text-center text-gray-800 text-xl font-bold font-['Montserrat']">
                                 (1/20)</div>
                         </div>
                         <button class="rounded-[10px] justify-center items-center gap-2.5 inline-flex">
