@@ -25,9 +25,9 @@
 
 
             <div>
-                <div class="text-center text-gray-800 text-[64px] font-normal font-['Montserrat']">
+                <div class="text-center text-neutral-800 text-[64px] font-normal font-['Montserrat']">
                     Daftar Akun</div>
-                <div class="top-[100px] text-center text-gray-500 text-2xl font-normal font-['Montserrat']">
+                <div class="top-[100px] text-center text-neutral-500 text-2xl font-normal font-['Montserrat']">
                     Masukkan data yang sesuai</div>
             </div>
 
@@ -44,7 +44,7 @@
 
 
             <div class="w-full flex px-60 ">
-                <div class="w-full flex-col flex items-center bg-gray-200 py-24 px-56 gap-8 rounded-[32px]">
+                <div class="w-full flex-col flex items-center bg-neutral-200 py-24 px-56 gap-8 rounded-[32px]">
                     <form class="w-full flex flex-col items-center gap-8" method="POST"
                         action="{{ route('auth.daftar.register') }}">
                         @csrf
@@ -54,9 +54,9 @@
                             <div class="w-full flex flex-col justify-between items-center">
 
                                 <div
-                                    class="w-full bg-gray-50 items-center rounded-lg border border-gray-500 flex">
+                                    class="w-full bg-neutral-50 items-center rounded-lg border border-neutral-500 flex">
                                     <input type="text" name="namalengkap"
-                                        class="w-full text-gray-800 text-2xl font-normal font-['Montserrat'] p-5 rounded-lg outline-none"
+                                        class="w-full text-neutral-800 text-2xl font-normal font-['Montserrat'] p-5 rounded-lg outline-none"
                                         placeholder="Nama Lengkap">
 
                                 </div>
@@ -70,9 +70,9 @@
                             <div class="w-full hidden flex-col justify-between items-center">
 
                                 <div
-                                    class="w-full bg-gray-50 items-center rounded-lg border border-gray-500 flex">
+                                    class="w-full bg-neutral-50 items-center rounded-lg border border-neutral-500 flex">
                                     <input type="hidden" name="tipe_akun" value="User"
-                                        class="w-full text-gray-800 text-2xl font-normal font-['Montserrat'] p-5 rounded-lg outline-none"
+                                        class="w-full text-neutral-800 text-2xl font-normal font-['Montserrat'] p-5 rounded-lg outline-none"
                                         placeholder="Nama Lengkap">
 
                                 </div>
@@ -81,9 +81,9 @@
                             <div class="w-full flex flex-col justify-between items-center">
 
                                 <div
-                                    class="w-full bg-gray-50 items-center rounded-lg border border-gray-500 flex">
+                                    class="w-full bg-neutral-50 items-center rounded-lg border border-neutral-500 flex">
                                     <input type="number" name="nomor_telepon"
-                                        class="w-full text-gray-800 text-2xl font-normal font-['Montserrat'] p-5 rounded-lg outline-none"
+                                        class="w-full text-neutral-800 text-2xl font-normal font-['Montserrat'] p-5 rounded-lg outline-none"
                                         placeholder="Nomor Telepon">
 
                                 </div>
@@ -97,9 +97,9 @@
                             <div class="w-full flex flex-col justify-between items-center">
 
                                 <div
-                                    class="w-full bg-gray-50 items-center rounded-lg border border-gray-500 flex">
+                                    class="w-full bg-neutral-50 items-center rounded-lg border border-neutral-500 flex">
                                     <input type="email" name="email"
-                                        class="w-full text-gray-800 text-2xl font-normal font-['Montserrat'] p-5 rounded-lg outline-none"
+                                        class="w-full text-neutral-800 text-2xl font-normal font-['Montserrat'] p-5 rounded-lg outline-none"
                                         placeholder="Email">
 
                                 </div>
@@ -113,12 +113,12 @@
                             <div class="w-full flex flex-col justify-between items-center">
 
                                 <div
-                                    class="w-full bg-gray-50 items-center rounded-lg border border-gray-500 pr-4 flex">
+                                    class="w-full bg-neutral-50 items-center rounded-lg border border-neutral-500 pr-4 flex">
                                     <input type="password" name="password" id="password"
-                                        class="w-full text-gray-800 text-2xl font-normal font-['Montserrat'] p-5 rounded-lg outline-none"
+                                        class="w-full text-neutral-800 text-2xl font-normal font-['Montserrat'] p-5 rounded-lg outline-none"
                                         placeholder="Password">
 
-                                    <i class="ph ph-eye-slash  text-gray-700 text-3xl cursor-pointer"
+                                    <i class="ph ph-eye-slash  text-neutral-700 text-3xl cursor-pointer"
                                         id="showPassword"></i>
                                 </div>
                                 @error('password')
@@ -131,7 +131,7 @@
                         </div>
 
                         <div
-                            class=" text-gray-800 justify-center items-center text-center inline-flex text-l font-normal font-['Montserrat']">
+                            class=" text-neutral-800 justify-center items-center text-center inline-flex text-l font-normal font-['Montserrat']">
 
                             Dengan menekan Daftar, saya telah menyetujui Syarat dan Ketentuan, serta Kebijakan
                             Privasi Jafa Digital Printing
@@ -139,7 +139,7 @@
 
                         <button type="submit"
                             class="w-fit px-7 py-4  bg-blue-500 rounded-[10px] inline-flex hover:opacity-75">
-                            <div class=" text-gray-100 text-2xl font-normal font-['Montserrat'] ">
+                            <div class=" text-neutral-100 text-2xl font-normal font-['Montserrat'] ">
                                 Daftar
                             </div>
                         </button>
@@ -149,7 +149,7 @@
 
 
 
-                        <div class=" text-gray-800 text-xl font-bold font-['Montserrat']">
+                        <div class=" text-neutral-800 text-xl font-bold font-['Montserrat']">
                             sudah punya akun?</div>
 
                         <button onclick="window.location.href='login-akun'"

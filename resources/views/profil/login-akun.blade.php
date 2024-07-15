@@ -25,9 +25,9 @@
 
 
             <div>
-                <div class=" text-center text-gray-800 text-[64px] font-normal font-['Montserrat']">
+                <div class=" text-center text-neutral-800 text-[64px] font-normal font-['Montserrat']">
                     Login Akun</div>
-                <div class="top-[100px] text-center text-gray-500 text-2xl font-normal font-['Montserrat']">
+                <div class="top-[100px] text-center text-neutral-500 text-2xl font-normal font-['Montserrat']">
                     Silahkan masukkan email dan password anda</div>
             </div>
 
@@ -44,7 +44,7 @@
 
             <div class="w-full flex px-60 ">
                 <div
-                    class="w-full h-fit flex-col flex items-center relative bg-gray-200 py-24 px-56 gap-8 rounded-[32px]">
+                    class="w-full h-fit flex-col flex items-center relative bg-neutral-200 py-24 px-56 gap-8 rounded-[32px]">
                     <form class="w-full flex flex-col items-center gap-8" method="POST"
                         action="{{ route('auth.masuk.login') }}">
                         @csrf
@@ -53,9 +53,9 @@
                             <div class="w-full flex flex-col justify-between items-center">
 
                                 <div
-                                    class="w-full bg-gray-50 items-center rounded-lg border border-gray-500 flex">
+                                    class="w-full bg-neutral-50 items-center rounded-lg border border-neutral-500 flex">
                                     <input type="email" name="email"
-                                        class="w-full text-gray-800 text-2xl font-normal font-['Montserrat'] p-5 rounded-lg outline-none"
+                                        class="w-full text-neutral-800 text-2xl font-normal font-['Montserrat'] p-5 rounded-lg outline-none"
                                         placeholder="Email">
 
                                 </div>
@@ -76,12 +76,12 @@
                             <div class="w-full flex flex-col justify-between items-center">
 
                                 <div
-                                    class="w-full bg-gray-50 items-center rounded-lg border border-gray-500 pr-4 flex">
+                                    class="w-full bg-neutral-50 items-center rounded-lg border border-neutral-500 pr-4 flex">
                                     <input type="password" name="password" id="password"
-                                        class="w-full text-gray-800 text-2xl font-normal font-['Montserrat'] p-5 rounded-lg outline-none"
+                                        class="w-full text-neutral-800 text-2xl font-normal font-['Montserrat'] p-5 rounded-lg outline-none"
                                         placeholder="Password">
 
-                                    <i class="ph ph-eye-slash  text-gray-700 text-3xl cursor-pointer"
+                                    <i class="ph ph-eye-slash  text-neutral-700 text-3xl cursor-pointer"
                                         id="showPassword"></i>
                                 </div>
                                 @error('password')
@@ -102,7 +102,7 @@
 
                         <button type="submit"
                             class="w-fit px-7 py-4  bg-blue-500 rounded-[10px] inline-flex hover:opacity-75">
-                            <div class=" text-gray-100 text-2xl font-normal font-['Montserrat'] ">
+                            <div class=" text-neutral-100 text-2xl font-normal font-['Montserrat'] ">
                                 Login
                             </div>
                         </button>
@@ -112,7 +112,7 @@
 
 
 
-                        <div class=" text-gray-800 text-xl font-bold font-['Montserrat']">
+                        <div class=" text-neutral-800 text-xl font-bold font-['Montserrat']">
                             belum punya akun?</div>
 
                         <button onclick="window.location.href='/daftar-akun'"

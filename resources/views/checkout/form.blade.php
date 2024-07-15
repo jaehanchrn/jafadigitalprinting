@@ -17,10 +17,10 @@
 <body class="w-full h-full antialiased">
 
     <div class="w-full flex-col justify-center items-center flex  ">
-        <div class="w-[1000px] h-fit flex-col flex items-center relative bg-gray-200 rounded-2xl ">
+        <div class="w-[1000px] h-fit flex-col flex items-center relative bg-neutral-200 rounded-2xl ">
             <div
                 class="w-[1000px] h-fit justify-center items-center flex py-8 relative bg-blue-500 rounded-tr-2xl rounded-tl-2xl">
-                <div class="py-6 text-5xl text-gray-50 font-normal font-['Montserrat'] ">
+                <div class="py-6 text-5xl text-neutral-50 font-normal font-['Montserrat'] ">
                     Alamat Penerima
                 </div>
             </div>
@@ -34,9 +34,9 @@
                     <input type="hidden" name="user_id" value="{{ auth()->user()->id }}">
                     <!-- Alamat -->
                     <div class="w-full flex flex-col justify-between items-center">
-                        <div class="w-full bg-gray-50 items-center rounded-lg border border-gray-500 flex">
+                        <div class="w-full bg-neutral-50 items-center rounded-lg border border-neutral-500 flex">
                             <textarea name="address" id="text"
-                                class="w-full text-gray-800 text-2xl font-normal font-['Montserrat'] p-5 rounded-lg outline-none"
+                                class="w-full text-neutral-800 text-2xl font-normal font-['Montserrat'] p-5 rounded-lg outline-none"
                                 placeholder="Alamat Lengkap"></textarea>
                         </div>
                         @error('address')
@@ -48,9 +48,9 @@
 
                     <!-- Dropdown Pricelist -->
                     <div class="w-full flex flex-col justify-between items-center">
-                        <div class="w-full bg-gray-50 px-4 py-2 items-center rounded-lg border border-gray-500 flex">
+                        <div class="w-full bg-neutral-50 px-4 py-2 items-center rounded-lg border border-neutral-500 flex">
                             <select name="pricelist_id"
-                                class="text-gray-800 rounded-lg text-2xl font-normal font-['Montserrat']">
+                                class="text-neutral-800 rounded-lg text-2xl font-normal font-['Montserrat']">
                                 @php
                                     $previousCity = null;
                                 @endphp
@@ -63,7 +63,7 @@
                                     @endif
                                 @endforeach
                             </select>
-                            {{-- <i class="ph-fill ph-caret-down text-gray-500 text-3xl "></i> --}}
+                            {{-- <i class="ph-fill ph-caret-down text-neutral-500 text-3xl "></i> --}}
                         </div>
                         @error('pricelist_id')
                             <div class="w-full text-start text-red-500">
@@ -73,14 +73,14 @@
                     </div>
                     <!-- Dropdown Pricelist -->
                     <div class="w-full flex flex-col justify-between items-center">
-                        <div class="w-full bg-gray-50 px-4 py-2 items-center rounded-lg border border-gray-500 flex">
+                        <div class="w-full bg-neutral-50 px-4 py-2 items-center rounded-lg border border-neutral-500 flex">
                             <select name="pricelist_id"
-                                class="text-gray-800 rounded-lg text-2xl font-normal font-['Montserrat']">
+                                class="text-neutral-800 rounded-lg text-2xl font-normal font-['Montserrat']">
                                 @foreach ($pricelists as $pricelist)
                                     <option value="{{ $pricelist->id }}">{{ $pricelist->name_disctrict }}</option>
                                 @endforeach
                             </select>
-                            {{-- <i class="ph-fill ph-caret-down text-gray-500 text-3xl "></i> --}}
+                            {{-- <i class="ph-fill ph-caret-down text-neutral-500 text-3xl "></i> --}}
                         </div>
                         @error('pricelist_id')
                             <div class="w-full text-start text-red-500">
@@ -92,9 +92,9 @@
 
                     <!-- Kode Pos -->
                     <div class="w-full flex flex-col justify-between items-center">
-                        <div class="w-full bg-gray-50 items-center rounded-lg border border-gray-500 flex">
+                        <div class="w-full bg-neutral-50 items-center rounded-lg border border-neutral-500 flex">
                             <input type="text" name="zip_code" id="text"
-                                class="w-full text-gray-800 text-2xl font-normal font-['Montserrat'] p-5 rounded-lg outline-none"
+                                class="w-full text-neutral-800 text-2xl font-normal font-['Montserrat'] p-5 rounded-lg outline-none"
                                 placeholder="Kode Pos">
                         </div>
                         @error('zip_code')
@@ -108,12 +108,12 @@
                     <div class="w-full flex-col flex justify-center items-center gap-8 py-8 pb-20">
                         <button type="submit"
                             class="px-7 py-4  bg-blue-500 rounded-[10px] inline-flex hover:opacity-75">
-                            <div class="text-gray-100 text-2xl font-normal font-['Montserrat']">
+                            <div class="text-neutral-100 text-2xl font-normal font-['Montserrat']">
                                 Simpan Alamat
                             </div>
                         </button>
                         <a href="{{ route('checkout.address.index') }}"
-                            class="px-7 py-4  bg-gray-50 rounded-[10px] border-blue-500 border-2 inline-flex hover:opacity-75">
+                            class="px-7 py-4  bg-neutral-50 rounded-[10px] border-blue-500 border-2 inline-flex hover:opacity-75">
                             <div class="text-blue-500 text-2xl font-normal font-['Montserrat']">
                                 Batal
                             </div>

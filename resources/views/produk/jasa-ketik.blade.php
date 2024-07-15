@@ -25,10 +25,10 @@
             <div class="w-[1000px] h-fit flex-col flex items-center relative  gap-20">
 
                 <div class="w-full flex-col flex justify-center items-center">
-                    <div class="text-center text-gray-800 text-[64px] font-normal font-['Montserrat']">Jasa Ketik
+                    <div class="text-center text-neutral-800 text-[64px] font-normal font-['Montserrat']">Jasa Ketik
                         dan
                         Desain</div>
-                    <div class=" text-center text-gray-500 text-xl font-normal font-['Montserrat']">Kami
+                    <div class=" text-center text-neutral-500 text-xl font-normal font-['Montserrat']">Kami
                         siap
                         melayani pengetikan dan juga desain yang ada butuhkan. <br> belum ada referensi atau ide untuk
                         desain? Tenang kami akan bantu solusikan <br> apa yang anda inginkan!</div>
@@ -41,7 +41,7 @@
                         untuk saat ini hanya melayani melalui datang ke toko langsung atau menghubungi whatsapp kami
                         melalui nomor dibawah ini</div>
                     <button class="px-7 py-4  bg-blue-500 rounded-[10px] inline-flex hover:opacity-75">
-                        <div class=" text-gray-100 text-2xl font-normal font-['Montserrat']">
+                        <div class=" text-neutral-100 text-2xl font-normal font-['Montserrat']">
                             Kirim Pesan
                             melalui Whatsapp
                         </div>

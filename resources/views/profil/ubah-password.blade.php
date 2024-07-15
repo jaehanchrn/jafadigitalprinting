@@ -39,50 +39,50 @@
                     <div class="w-full">
                         <div class="w-full justify-start items-start flex-col flex gap-9 pr-60">
                             <div
-                                class=" justify-start items-start text-gray-800 text-6xl font-normal font-['Montserrat']  ">
+                                class=" justify-start items-start text-neutral-800 text-6xl font-normal font-['Montserrat']  ">
                                 UBAH PASSWORD
                             </div>
 
 
                             <div class="w-full  justify-start items-start flex">
                                 <div
-                                    class="w-full rounded-full border-2 border-gray-300  items-start inline-flex">
+                                    class="w-full rounded-full border-2 border-neutral-300  items-start inline-flex">
                                 </div>
                             </div>
 
                             <div class="w-full flex flex-col justify-start items-start gap-6">
 
                                 <div class="w-full flex flex-col gap-1">
-                                    {{-- <div class="text-gray-700 text-2xl font-normal font-['Montserrat']">
+                                    {{-- <div class="text-neutral-700 text-2xl font-normal font-['Montserrat']">
                                             Jenis Bahan</div> --}}
                                     <div class="flex-col justify-between items-start inline-flex">
                                         <div
-                                            class="w-full justify-between p-5 bg-gray-50 rounded-lg border border-gray-500 items-start inline-flex">
-                                            <div class="text-gray-300 text-2xl font-normal font-['Montserrat']">
+                                            class="w-full justify-between p-5 bg-neutral-50 rounded-lg border border-neutral-500 items-start inline-flex">
+                                            <div class="text-neutral-300 text-2xl font-normal font-['Montserrat']">
                                                 Password Baru
                                             </div>
-                                            <button class="ph-fill ph-eye-slash  text-gray-700 text-3xl"></button>
+                                            <button class="ph-fill ph-eye-slash  text-neutral-700 text-3xl"></button>
                                             {{-- <button class="ph-fill ph-eye"></button> --}}
                                         </div>
                                     </div>
-                                    {{-- <div class="text-gray-500 text-l font-normal font-['Montserrat']">
+                                    {{-- <div class="text-neutral-500 text-l font-normal font-['Montserrat']">
                                             *maksimal 10 huruf</div> --}}
                                 </div>
 
                                 <div class="w-full flex flex-col gap-1">
-                                    {{-- <div class="text-gray-700 text-2xl font-normal font-['Montserrat']">
+                                    {{-- <div class="text-neutral-700 text-2xl font-normal font-['Montserrat']">
                                             Jenis Bahan</div> --}}
                                     <div class="flex-col justify-between items-start inline-flex">
                                         <div
-                                            class="w-full justify-between p-5 bg-gray-50 rounded-lg border border-gray-500 items-start inline-flex">
-                                            <div class="text-gray-300 text-2xl font-normal font-['Montserrat']">
+                                            class="w-full justify-between p-5 bg-neutral-50 rounded-lg border border-neutral-500 items-start inline-flex">
+                                            <div class="text-neutral-300 text-2xl font-normal font-['Montserrat']">
                                                 Ulangi Password
                                             </div>
-                                            <button class="ph-fill ph-eye-slash  text-gray-700 text-3xl"></button>
+                                            <button class="ph-fill ph-eye-slash  text-neutral-700 text-3xl"></button>
                                             {{-- <button class="ph-fill ph-eye"></button> --}}
                                         </div>
                                     </div>
-                                    {{-- <div class="text-gray-500 text-l font-normal font-['Montserrat']">
+                                    {{-- <div class="text-neutral-500 text-l font-normal font-['Montserrat']">
                                             *maksimal 10 huruf</div> --}}
                                 </div>
 
@@ -90,7 +90,7 @@
 
                             <div class="w-full justify-start flex">
                                 <button class="px-7 py-4  bg-blue-500 rounded-[10px] inline-flex hover:opacity-75">
-                                    <div class=" text-gray-50 text-2xl font-normal font-['Montserrat']">
+                                    <div class=" text-neutral-50 text-2xl font-normal font-['Montserrat']">
                                         Simpan
                                     </div>
                                 </button>

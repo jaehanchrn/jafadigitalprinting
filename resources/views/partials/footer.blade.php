@@ -15,8 +15,8 @@
 
             <div class="w-full relative justify-start items-center gap-5 inline-flex">
                 <div class="text-white text-2xl font-bold font-['Montserrat']">Follow Us</div>
-                <div class="w-[46px] h-[46px] justify-center flex items-center bg-gray-300 rounded-full">
-                    <i class="ph-bold ph-instagram-logo text-gray-500 text-3xl "></i>
+                <div class="w-[46px] h-[46px] justify-center flex items-center bg-neutral-300 rounded-full">
+                    <i class="ph-bold ph-instagram-logo text-neutral-500 text-3xl "></i>
                 </div>
             </div>
         </div>

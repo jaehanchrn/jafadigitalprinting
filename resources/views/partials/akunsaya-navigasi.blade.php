@@ -7,7 +7,7 @@
             <div class="w-full flex-col flex">
 
                 <div
-                    class="justify-center items-center flex-col flex text-gray-50 bg-blue-500 rounded-tl-2xl rounded-tr-2xl py-6 text-[40px] font-normal font-['Montserrat']">
+                    class="justify-center items-center flex-col flex text-neutral-50 bg-blue-500 rounded-tl-2xl rounded-tr-2xl py-6 text-[40px] font-normal font-['Montserrat']">
                     Akun Saya</div>
 
                 <div class="w-full p-8">

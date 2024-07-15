@@ -39,13 +39,13 @@
                     <div class="w-full">
                         <div class="w-full justify-start items-start flex-col flex gap-9 pr-60">
                             <div
-                                class=" justify-start items-start text-gray-800 text-6xl font-normal font-['Montserrat']  ">
+                                class=" justify-start items-start text-neutral-800 text-6xl font-normal font-['Montserrat']  ">
                                 PROFIL SAYA
                             </div>
 
 
                             <div class="w-full  justify-start items-start flex">
-                                <div class="w-full rounded-full border-2 border-gray-300  items-start inline-flex">
+                                <div class="w-full rounded-full border-2 border-neutral-300  items-start inline-flex">
                                 </div>
                             </div>
 
@@ -56,7 +56,7 @@
                                     <div class="w-full flex flex-col">
                                         <div class="flex-col justify-between items-start inline-flex">
                                             <input
-                                                class="w-full font-['Montserrat'] justify-between p-5 bg-gray-50 text-gray-700 text-2xl font-normal  rounded-lg border border-gray-500 items-start inline-flex"
+                                                class="w-full font-['Montserrat'] justify-between p-5 bg-neutral-50 text-neutral-700 text-2xl font-normal  rounded-lg border border-neutral-500 items-start inline-flex"
                                                 value="{{ auth()->user()->namalengkap }}" name="namalengkap" id="namalengkap">
                                         </div>
                                     </div>
@@ -64,7 +64,7 @@
                                     <div class="w-full flex flex-col">
                                         <div class="flex-col justify-between items-start inline-flex">
                                             <input
-                                                class="w-full font-['Montserrat'] justify-between p-5 bg-gray-50 text-gray-700 text-2xl font-normal  rounded-lg border border-gray-500 items-start inline-flex"
+                                                class="w-full font-['Montserrat'] justify-between p-5 bg-neutral-50 text-neutral-700 text-2xl font-normal  rounded-lg border border-neutral-500 items-start inline-flex"
                                                 value="{{ auth()->user()->nomor_telepon }}" name="nomor_telepon" id="nomor_telepon">
                                         </div>
                                     </div>
@@ -72,14 +72,14 @@
                                     <div class="w-full flex flex-col">
                                         <div class="flex-col justify-between items-start inline-flex">
                                             <input
-                                                class="w-full font-['Montserrat']  p-5 bg-gray-400 text-gray-700 text-2xl font-normal  rounded-lg inline-flex"
+                                                class="w-full font-['Montserrat']  p-5 bg-neutral-400 text-neutral-700 text-2xl font-normal  rounded-lg inline-flex"
                                                 value="{{ auth()->user()->email }}" name="email" id="email" readonly>
                                         </div>
                                     </div>
                             
                                     <div class="w-full justify-start flex">
                                         <button type="submit" class="px-7 py-4  bg-blue-500 rounded-[10px] inline-flex hover:opacity-75">
-                                            <div class=" text-gray-50 text-2xl font-normal font-['Montserrat']">
+                                            <div class=" text-neutral-50 text-2xl font-normal font-['Montserrat']">
                                                 Simpan
                                             </div>
                                         </button>

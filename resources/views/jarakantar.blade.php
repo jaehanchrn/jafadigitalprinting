@@ -32,7 +32,7 @@
             </div>
 
             <div
-                class="w-full justify-center items-center flex relative bg-gray-100 shadow-md shadow-gray-300 border-gray-200 border-2 rounded-[32px]">
+                class="w-full justify-center items-center flex relative bg-neutral-100 shadow-md shadow-neutral-300 border-neutral-200 border-2 rounded-[32px]">
                 <div class="w-full flex-col inline-flex relative justify-center items-center px-20 py-12 gap-12">
                     <div
                         class="w-full flex flex-col text-center text-blue-500 text-3xl font-bold font-['Montserrat']">
@@ -41,11 +41,11 @@
                     </div>
 
                     <div
-                        class="w-full flex-col flex relative justify-start items-start text-gray-800  text-3xl font-bold font-['Montserrat']">
+                        class="w-full flex-col flex relative justify-start items-start text-neutral-800  text-3xl font-bold font-['Montserrat']">
 
                         <table
-                        class=" w-full border-separate border-2 border-spacing-y-2 table-fixed text-xl font-normal font-['Montserrat'] text-gray-800">
-                        <thead class="font-bold bg-blue-500 text-gray-50 py-8">
+                        class=" w-full border-separate border-2 border-spacing-y-2 table-fixed text-xl font-normal font-['Montserrat'] text-neutral-800">
+                        <thead class="font-bold bg-blue-500 text-neutral-50 py-8">
                             <tr class="text-center">
                                 <td class="w-[60px]">No</td>
                                 <td>Kabupaten/Kota</td>

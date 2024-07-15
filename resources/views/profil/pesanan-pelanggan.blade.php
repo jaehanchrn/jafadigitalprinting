@@ -39,19 +39,19 @@
                     <div class="w-full">
                         <div class="w-full justify-start items-start flex-col flex gap-9 pr-32">
                             <div
-                                class=" justify-start items-start text-gray-800 text-6xl font-normal font-['Montserrat']  ">
+                                class=" justify-start items-start text-neutral-800 text-6xl font-normal font-['Montserrat']  ">
                                 PESANAN CUSTOMER
                             </div>
 
 
                             <div class="w-full  justify-start items-start flex">
-                                <div class="w-full rounded-full border-2 border-gray-300  items-start inline-flex">
+                                <div class="w-full rounded-full border-2 border-neutral-300  items-start inline-flex">
                                 </div>
                             </div>
 
 
                             <table
-                                class=" w-full border-separate border-2 border-spacing-5 table-fixed text-xl font-normal font-['Montserrat'] text-gray-800">
+                                class=" w-full border-separate border-2 border-spacing-5 table-fixed text-xl font-normal font-['Montserrat'] text-neutral-800">
                                 <thead class="font-bold">
                                     <tr>
                                         <td>No</td>

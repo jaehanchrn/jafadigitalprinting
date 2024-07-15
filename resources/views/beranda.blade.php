@@ -47,11 +47,11 @@
                 {{-- Button nextnews & prevnewsious --}}
                 <div class="w-fit h-full z-40 px-8 pb-8 left-0  absolute justify-center items-center inline-flex">
                     <i
-                        class="text-5xl ph ph-caret-left text-gray-100 cursor-pointer prevnews-btn p-2 bg-netral-100 rounded-full shadow-card-m"></i>
+                        class="text-5xl ph ph-caret-left text-neutral-100 cursor-pointer prevnews-btn p-2 bg-netral-100 rounded-full shadow-card-m"></i>
                 </div>
                 <div class="w-fit h-full z-40 px-8 pb-8 right-0  absolute justify-center items-center inline-flex">
                     <i
-                        class="text-5xl ph ph-caret-right text-gray-100 cursor-pointer nextnews-btn p-2 bg-netral-100 rounded-full shadow-card-m"></i>
+                        class="text-5xl ph ph-caret-right text-neutral-100 cursor-pointer nextnews-btn p-2 bg-netral-100 rounded-full shadow-card-m"></i>
                 </div>
 
                 {{-- Stepper --}}
@@ -182,17 +182,17 @@
         <div class="w-full h-fit flex flex-row py-8">
             <div class="w-full px-20 flex-col flex">
 
-                <div class=" text-gray-800 text-[64px] font-normal font-['Montserrat']"> Kenapa harus</div>
+                <div class=" text-neutral-800 text-[64px] font-normal font-['Montserrat']"> Kenapa harus</div>
                 <div class=" pb-8 text-5xl font-normal font-['Montserrat'] relative w-fit">
-                    <div class=" text-gray-100 text-5xl font-normal font-['Montserrat'] relative z-10">Jafa Digital
+                    <div class=" text-neutral-100 text-5xl font-normal font-['Montserrat'] relative z-10">Jafa Digital
                         Printing </div>
                     <div class="w-[480px] h-12 left-0 top-0 absolute bg-blue-500 z-0"></div>
                     <div
-                        class=" text-gray-800 text-[200px] font-normal font-['Manjari'] bottom-0 -right-20 absolute">
+                        class=" text-neutral-800 text-[200px] font-normal font-['Manjari'] bottom-0 -right-20 absolute">
                         ?
                     </div>
                 </div>
-                <div class="  text-gray-800 text-lg font-normal font-['Montserrat']">
+                <div class="  text-neutral-800 text-lg font-normal font-['Montserrat']">
                     Berlokasi di Sukahati, Cibinong, Kabupaten Bogor dan sudah berdiri sejak tahun 2012, melayani
                     kebutuhan dalam percetakan, jasa desain grafis, pengetikan dengan layanan yang berkualitas dan
                     terpercaya.
@@ -203,19 +203,19 @@
                         <div class="w-28 h-28 justify-center flex items-center">
                             <img class="w-fit h-full" src="pictures/why-1.png" />
                         </div>
-                        <div class="text-gray-800 text-xl font-normal font-['Montserrat']">Good Quality</div>
+                        <div class="text-neutral-800 text-xl font-normal font-['Montserrat']">Good Quality</div>
                     </div>
                     <div class="w-fit  flex-col justify-center items-center gap-7 inline-flex group/jasa ">
                         <div class="w-28 h-28 justify-center flex items-center">
                             <img class="w-fit h-full" src="pictures/why-2.png" />
                         </div>
-                        <div class="text-gray-800 text-xl font-normal font-['Montserrat']">Harga Terjangkau</div>
+                        <div class="text-neutral-800 text-xl font-normal font-['Montserrat']">Harga Terjangkau</div>
                     </div>
                     <div class="w-fit flex-col justify-center items-center gap-7 inline-flex">
                         <div class="w-28 h-28 justify-center flex items-center">
                             <img class="w-fit h-full" src="pictures/why-3.png" />
                         </div>
-                        <div class="text-gray-800 text-xl font-normal font-['Montserrat']">Cepat dan Aman</div>
+                        <div class="text-neutral-800 text-xl font-normal font-['Montserrat']">Cepat dan Aman</div>
                     </div>
                 </div>
 
@@ -229,7 +229,7 @@
             {{-- Jasa Cetak  --}}
             <div class="w-fit flex-col flex relative justify-center items-center gap-6 ">
                 <div class="w-full flex flex-col justify-start items-start relative">
-                    <div class=" text-gray-800 text-3xl font-bold font-['Montserrat']">
+                    <div class=" text-neutral-800 text-3xl font-bold font-['Montserrat']">
                         Mau cari Jasa Cetak
                         apa?
                     </div>
@@ -238,12 +238,12 @@
 
                 <div class="w-full h-fit flex-row flex relative gap-6  justify-start items-start ">
                     <div
-                        class="w-72 h-fit relative flex flex-col shadow-md shadow-gray-300 rounded-xl justify-between">
+                        class="w-72 h-fit relative flex flex-col shadow-md shadow-neutral-300 rounded-xl justify-between">
 
                         <img class="w-72 h-full  rounded-tl-xl rounded-tr-xl"
                             src="{{ url('pictures/jasa-cetak/cetak-photo.jpg') }}" />
-                        <div class="w-72 py-6 bg-blue-500 shadow-md shadow-gray-400 px-6 rounded-br-xl rounded-bl-xl">
-                            <div class="w-full   text-gray-100 text-xl font-bold font-['Montserrat']">Cetak Photo
+                        <div class="w-72 py-6 bg-blue-500 shadow-md shadow-neutral-400 px-6 rounded-br-xl rounded-bl-xl">
+                            <div class="w-full   text-neutral-100 text-xl font-bold font-['Montserrat']">Cetak Photo
                                 Berbagai Ukuran</div>
                             <div class="w-full  text-blue-100 font-normal font-['Montserrat']">Rp
                                 10.000/Lembar
@@ -251,24 +251,24 @@
                         </div>
                     </div>
                     <div
-                        class="w-72 h-fit relative flex flex-col shadow-md shadow-gray-300 rounded-xl justify-between">
+                        class="w-72 h-fit relative flex flex-col shadow-md shadow-neutral-300 rounded-xl justify-between">
 
                         <img class="w-72 h-full  rounded-tl-xl rounded-tr-xl"
                             src="{{ url('pictures/jasa-cetak/cetak-sertifikat.jpg') }}" />
-                        <div class="w-72 py-6 bg-blue-500 shadow-md shadow-gray-400 px-6 rounded-br-xl rounded-bl-xl">
-                            <div class="w-full   text-gray-100 text-xl font-bold font-['Montserrat']">Cetak Sertifikat Ukuran A4 </div>
+                        <div class="w-72 py-6 bg-blue-500 shadow-md shadow-neutral-400 px-6 rounded-br-xl rounded-bl-xl">
+                            <div class="w-full   text-neutral-100 text-xl font-bold font-['Montserrat']">Cetak Sertifikat Ukuran A4 </div>
                             <div class="w-full  text-blue-100 font-normal font-['Montserrat']">Rp
                                5.000/Lembar
                                 A4</div>
                         </div>
                     </div>
                     <div
-                        class="w-72 h-fit relative flex flex-col shadow-md shadow-gray-300 rounded-xl justify-between">
+                        class="w-72 h-fit relative flex flex-col shadow-md shadow-neutral-300 rounded-xl justify-between">
 
                         <img class="w-72 h-full  rounded-tl-xl rounded-tr-xl"
                             src="{{ url('pictures/jasa-cetak/cetak-kartu.jpg') }}" />
-                        <div class="w-72 py-6 bg-blue-500 shadow-md shadow-gray-400 px-6 rounded-br-xl rounded-bl-xl">
-                            <div class="w-full   text-gray-100 text-xl font-bold font-['Montserrat']">Cetak Kartu Nama dan Kartu Ucapan
+                        <div class="w-72 py-6 bg-blue-500 shadow-md shadow-neutral-400 px-6 rounded-br-xl rounded-bl-xl">
+                            <div class="w-full   text-neutral-100 text-xl font-bold font-['Montserrat']">Cetak Kartu Nama dan Kartu Ucapan
                             </div>
                             <div class="w-full  text-blue-100 font-normal font-['Montserrat']">Rp
                                 10.000/Lembar
@@ -288,41 +288,41 @@
             {{-- Produk  --}}
             <div class="w-fit flex-col flex relative justify-center items-center gap-6 ">
                 <div class="w-full flex flex-col justify-start items-start relative">
-                    <div class=" text-gray-800 text-3xl font-bold font-['Montserrat']">
+                    <div class=" text-neutral-800 text-3xl font-bold font-['Montserrat']">
                         Berbagai Pilihan Produk
                     </div>
                 </div>
 
                 <div class="w-full h-fit flex-row flex relative gap-6  justify-start items-start ">
                     <div
-                        class="w-72 h-fit relative flex flex-col shadow-md shadow-gray-300 rounded-xl justify-between">
+                        class="w-72 h-fit relative flex flex-col shadow-md shadow-neutral-300 rounded-xl justify-between">
 
                         <img class="w-72 h-full  rounded-tl-xl rounded-tr-xl"
                             src="{{ url('pictures/alat-tulis/pulpen-standard-hitam.jpg') }}" />
-                        <div class="w-72 py-6 bg-blue-500 shadow-md shadow-gray-400 px-6 rounded-br-xl rounded-bl-xl">
-                            <div class="w-full   text-gray-100 text-xl font-bold font-['Montserrat']">Pulpen Standard AE7 Hitam (12 pcs)</div>
+                        <div class="w-72 py-6 bg-blue-500 shadow-md shadow-neutral-400 px-6 rounded-br-xl rounded-bl-xl">
+                            <div class="w-full   text-neutral-100 text-xl font-bold font-['Montserrat']">Pulpen Standard AE7 Hitam (12 pcs)</div>
                             <div class="w-full  text-blue-100 font-normal font-['Montserrat']">Rp
                                 22.000/pack</div>
                         </div>
                     </div>
                     <div
-                        class="w-72 h-fit relative flex flex-col shadow-md shadow-gray-300 rounded-xl justify-between">
+                        class="w-72 h-fit relative flex flex-col shadow-md shadow-neutral-300 rounded-xl justify-between">
 
                         <img class="w-72 h-full  rounded-tl-xl rounded-tr-xl"
                             src="{{ url('pictures/alat-tulis/pulpen-standard-biru.jpg') }}" />
-                        <div class="w-72 py-6 bg-blue-500 shadow-md shadow-gray-400 px-6 rounded-br-xl rounded-bl-xl">
-                            <div class="w-full   text-gray-100 text-xl font-bold font-['Montserrat']">Pulpen Standard AE7 Biru (12 pcs)</div>
+                        <div class="w-72 py-6 bg-blue-500 shadow-md shadow-neutral-400 px-6 rounded-br-xl rounded-bl-xl">
+                            <div class="w-full   text-neutral-100 text-xl font-bold font-['Montserrat']">Pulpen Standard AE7 Biru (12 pcs)</div>
                             <div class="w-full  text-blue-100 font-normal font-['Montserrat']">Rp
                                 22.000/pack</div>
                         </div>
                     </div>
                     <div
-                        class="w-72 h-fit relative flex flex-col shadow-md shadow-gray-300 rounded-xl justify-between">
+                        class="w-72 h-fit relative flex flex-col shadow-md shadow-neutral-300 rounded-xl justify-between">
 
                         <img class="w-72 h-full  rounded-tl-xl rounded-tr-xl"
                             src="{{ url('pictures/alat-tulis/pulpen-standard-merah.jpg') }}" />
-                        <div class="w-72 py-6 bg-blue-500 shadow-md shadow-gray-400 px-6 rounded-br-xl rounded-bl-xl">
-                            <div class="w-full   text-gray-100 text-xl font-bold font-['Montserrat']">Pulpen Standard AE7 Merah (12 pcs)</div>
+                        <div class="w-72 py-6 bg-blue-500 shadow-md shadow-neutral-400 px-6 rounded-br-xl rounded-bl-xl">
+                            <div class="w-full   text-neutral-100 text-xl font-bold font-['Montserrat']">Pulpen Standard AE7 Merah (12 pcs)</div>
                             <div class="w-full  text-blue-100 font-normal font-['Montserrat']">Rp
                                 22.000/pack</div>
                         </div>
@@ -331,34 +331,34 @@
 
                 <div class="w-full h-fit flex-row flex relative gap-6  justify-start items-start ">
                     <div
-                        class="w-72 h-fit relative flex flex-col shadow-md shadow-gray-300 rounded-xl justify-between">
+                        class="w-72 h-fit relative flex flex-col shadow-md shadow-neutral-300 rounded-xl justify-between">
 
                         <img class="w-72 h-full  rounded-tl-xl rounded-tr-xl"
                             src="{{ url('pictures/alat-tulis/pulpen-kenko-k1.jpg') }}" />
-                        <div class="w-72 py-6 bg-blue-500 shadow-md shadow-gray-400 px-6 rounded-br-xl rounded-bl-xl">
-                            <div class="w-full   text-gray-100 text-xl font-bold font-['Montserrat']">Pulpen Kenko Gel Pen K-1 Hitam (12 pcs)</div>
+                        <div class="w-72 py-6 bg-blue-500 shadow-md shadow-neutral-400 px-6 rounded-br-xl rounded-bl-xl">
+                            <div class="w-full   text-neutral-100 text-xl font-bold font-['Montserrat']">Pulpen Kenko Gel Pen K-1 Hitam (12 pcs)</div>
                             <div class="w-full  text-blue-100 font-normal font-['Montserrat']">Rp
                                 54.000/pack</div>
                         </div>
                     </div>
                     <div
-                        class="w-72 h-fit relative flex flex-col shadow-md shadow-gray-300 rounded-xl justify-between">
+                        class="w-72 h-fit relative flex flex-col shadow-md shadow-neutral-300 rounded-xl justify-between">
 
                         <img class="w-72 h-full  rounded-tl-xl rounded-tr-xl"
                             src="{{ url('pictures/alat-tulis/buku-sidu-58.jpg') }}" />
-                        <div class="w-72 py-6 bg-blue-500 shadow-md shadow-gray-400 px-6 rounded-br-xl rounded-bl-xl">
-                            <div class="w-full   text-gray-100 text-xl font-bold font-['Montserrat']">Buku Sinar Dunia 58halaman (10 pcs) </div>
+                        <div class="w-72 py-6 bg-blue-500 shadow-md shadow-neutral-400 px-6 rounded-br-xl rounded-bl-xl">
+                            <div class="w-full   text-neutral-100 text-xl font-bold font-['Montserrat']">Buku Sinar Dunia 58halaman (10 pcs) </div>
                             <div class="w-full  text-blue-100 font-normal font-['Montserrat']">Rp
                                 40.000/pack</div>
                         </div>
                     </div>
                     <div
-                        class="w-72 h-fit relative flex flex-col shadow-md shadow-gray-300 rounded-xl justify-between">
+                        class="w-72 h-fit relative flex flex-col shadow-md shadow-neutral-300 rounded-xl justify-between">
 
                         <img class="w-72 h-full  rounded-tl-xl rounded-tr-xl"
                             src="{{ url('pictures/alat-tulis/buku-sidu-38.jpg') }}" />
-                        <div class="w-72 py-6 bg-blue-500 shadow-md shadow-gray-400 px-6 rounded-br-xl rounded-bl-xl">
-                            <div class="w-full   text-gray-100 text-xl font-bold font-['Montserrat']">Buku Sinar Dunia 38halaman (10 pcs) </div>
+                        <div class="w-72 py-6 bg-blue-500 shadow-md shadow-neutral-400 px-6 rounded-br-xl rounded-bl-xl">
+                            <div class="w-full   text-neutral-100 text-xl font-bold font-['Montserrat']">Buku Sinar Dunia 38halaman (10 pcs) </div>
                             <div class="w-full  text-blue-100 font-normal font-['Montserrat']">Rp
                                 35.000/pack</div>
                         </div>
@@ -408,8 +408,8 @@
             </div>
             <div class="left-[70px] top-[530px] absolute justify-start items-center gap-5 inline-flex">
                 <div class="text-white text-2xl font-bold font-['Montserrat']">Follow Us</div>
-                <div class="w-[46px] h-[46px] justify-center flex items-center bg-gray-300 rounded-full">
-                    <i class="ph-bold ph-instagram-logo text-gray-500 text-3xl "></i>
+                <div class="w-[46px] h-[46px] justify-center flex items-center bg-neutral-300 rounded-full">
+                    <i class="ph-bold ph-instagram-logo text-neutral-500 text-3xl "></i>
                 </div>
             </div>
         </div>
