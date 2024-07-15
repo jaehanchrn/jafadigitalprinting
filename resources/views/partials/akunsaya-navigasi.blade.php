@@ -13,7 +13,7 @@
                 <div class="w-full p-8">
                     <div class="w-full gap-6 flex-col flex">
 
-                        <button onclick="window.location.href='/edit-profil'"
+                        <button onclick="window.location='{{ route('profil.edit') }}'"
                             class="self-stretch grow shrink basis-0 px-5 py-2.5 hover:bg-blue-200 justify-center items-center gap-2.5 inline-flex">
                             <div
                                 class="text-center text-blue-500 text-2xl font-normal font-['Montserrat']">

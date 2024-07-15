@@ -2,12 +2,13 @@
 
 use App\Models\Product\AlatTulis;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\UserController;
 use App\Http\Controllers\Orders\CartController;
 use App\Http\Controllers\JasaCetak\OrderController;
-use App\Http\Controllers\Orders\AddressUserController;
 use App\Http\Controllers\Orders\CheckoutController;
 use App\Http\Controllers\Product\AlatTulisController;
 use App\Http\Controllers\Product\JasaTulisController;
+use App\Http\Controllers\Orders\AddressUserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -98,9 +99,8 @@ Route::get('/jasa-cetak', function () {
 
 //profil
 
-Route::get('/edit-profil', function () {
-    return view('profil.edit-profil');
-});
+Route::get('/profil/edit', [UserController::class, 'edit'])->name('profil.edit');
+Route::post('/profil/update', [UserController::class, 'update'])->name('profil.update');
 
 Route::get('/ubah-password', function () {
     return view('profil.ubah-password');

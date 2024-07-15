@@ -28,21 +28,21 @@
 
         @auth
         <div class="w-fit h-fit justify-center items-center flex">
-            <button onclick="window.location.href='/edit-profil'"
-                class="text-center text-nowrap text-blue-500 hover:text-blue-400  text-xl font-normal font-['Montserrat'] underline">
+            <button onclick="window.location='{{ route('profil.edit') }}'"
+                class="text-center text-nowrap text-blue-500 hover:text-blue-400 text-xl font-normal font-['Montserrat'] underline">
                 Akun Profil
-        </button>
+            </button>
         </div>
-           
+
         @endauth
-        
+
         @guest
-        <div class="w-fit h-fit justify-center items-center flex">
-            <button onclick="window.location.href='login-akun'"
-                class="text-center text-nowrap text-blue-500 hover:text-blue-400  text-xl font-normal font-['Montserrat'] underline">
-                Login/Daftar
-        </button>
-        </div>    
+            <div class="w-fit h-fit justify-center items-center flex">
+                <button onclick="window.location.href='login-akun'"
+                    class="text-center text-nowrap text-blue-500 hover:text-blue-400  text-xl font-normal font-['Montserrat'] underline">
+                    Login/Daftar
+                </button>
+            </div>
         @endguest
     </div>
 
