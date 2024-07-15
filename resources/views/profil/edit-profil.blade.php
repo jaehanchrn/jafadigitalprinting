@@ -72,7 +72,7 @@
                                     <div class="w-full flex flex-col">
                                         <div class="flex-col justify-between items-start inline-flex">
                                             <input
-                                                class="w-full font-['Montserrat'] justify-between p-5 bg-neutral-400 text-neutral-700 text-2xl font-normal  rounded-lg items-start inline-flex"
+                                                class="w-full font-['Montserrat']  p-5  inline-flex"
                                                 value="{{ auth()->user()->email }}" name="email" id="email" readonly>
                                         </div>
                                     </div>
