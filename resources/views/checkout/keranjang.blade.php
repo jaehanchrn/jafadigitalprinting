@@ -57,7 +57,8 @@
                                                 <button
                                                     class="ph-bold ph-pencil-simple-line text-3xl text-blue-500 hover:text-blue-400"></button>
                                                 <button
-                                                    class="ph-bold ph-trash text-3xl text-red-500 hover:text-red-300"></button>
+                                                    class="ph-bold ph-trash text-3xl text-red-500 hover:text-red-300"
+                                                    onclick="deleteItem('{{ $item->id }}')"></button>
                                             </div>
                                         </div>
 
@@ -93,8 +94,6 @@
                                                 {{ number_format($item->product->price * $item->quantity, 0, ',', '.') }}
                                             </div>
                                         </div>
-
-                                        
                                     </div>
                                 </div>
                             @endforeach
@@ -146,6 +145,32 @@
             session(['total_price_product' => $total_price_product]);
         @endphp
     </div>
+
+    <!-- Include jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Script untuk penghapusan item -->
+    <script>
+        function deleteItem(itemId) {
+            if (confirm('Apakah Anda yakin ingin menghapus item ini?')) {
+                $.ajax({
+                    url: '/cart/delete/' + itemId, // Ganti dengan route yang sesuai untuk penghapusan
+                    type: 'DELETE',
+                    headers: {
+                        'X-CSRF-TOKEN': '{{ csrf_token() }}'
+                    },
+                    success: function(response) {
+                        console.log('Item berhasil dihapus');
+                        // Refresh halaman setelah penghapusan berhasil
+                        location.reload();
+                    },
+                    error: function(err) {
+                        console.error('Gagal menghapus item', err);
+                    }
+                });
+            }
+        }
+    </script>
 </body>
 
 </html>

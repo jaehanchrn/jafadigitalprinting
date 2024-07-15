@@ -3,12 +3,15 @@
 use App\Models\Product\AlatTulis;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\PasswordController;
 use App\Http\Controllers\Orders\CartController;
 use App\Http\Controllers\JasaCetak\OrderController;
 use App\Http\Controllers\Orders\CheckoutController;
 use App\Http\Controllers\Product\AlatTulisController;
 use App\Http\Controllers\Product\JasaTulisController;
 use App\Http\Controllers\Orders\AddressUserController;
+use App\Rules\MatchOldPassword;
+use Illuminate\Support\Facades\Validator;
 
 /*
 |--------------------------------------------------------------------------
@@ -32,6 +35,7 @@ Route::namespace('App\Http\Controllers\Auth')->group(function () {
     Route::post('profil.daftar_akun', 'RegisterController@register')->name('auth.daftar.register');
 });
 
+Route::delete('/cart/delete/{id}', [CartController::class, 'deleteItem'])->name('cart.delete');
 
 //TIDAK TAHU
 
@@ -104,7 +108,9 @@ Route::post('/profil/update', [UserController::class, 'update'])->name('profil.u
 
 Route::get('/ubah-password', function () {
     return view('profil.ubah-password');
-});
+})->name('password.edit');
+
+Route::put('/ubah-password', [PasswordController::class, 'update'])->name('password.update');
 
 Route::get('/riwayat-pesanan', function () {
     return view('profil.riwayat-pesanan');
