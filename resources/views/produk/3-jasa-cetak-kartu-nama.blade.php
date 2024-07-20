@@ -192,12 +192,14 @@
                                 @enderror
                             </div>
 
+                            @if (auth()->user()->tipe_akun === 'User')
                             <button type="submit"
                                 class="w-full h-[70px] py-5 justify-center items-center gap-2.5 inline-flex bg-neutral-800 rounded-lg">
                                 <div class="text-center text-neutral-50 text-xl font-bold font-['Montserrat']">
                                     Tambahkan
                                     ke Keranjang</div>
                             </button>
+                            @endif
                         </form>
                     </div>
                 </div>
