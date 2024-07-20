@@ -117,4 +117,10 @@
         @include('partials.footer')
 
     </div>
+<<<<<<< HEAD
 @endsection
+=======
+</body>
+
+</html>
+>>>>>>> origin/main

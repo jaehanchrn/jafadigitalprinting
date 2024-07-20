@@ -8,6 +8,7 @@ use App\Rules\MatchOldPassword;
 
 class PasswordController extends Controller
 {
+<<<<<<< HEAD
     
 
     public function __construct()
@@ -18,6 +19,12 @@ class PasswordController extends Controller
     public function update(Request $request)
     {
         $request->validate([
+=======
+    public function update(Request $request)
+    {
+        $request->validate([
+            'old_password' => ['required', new MatchOldPassword],
+>>>>>>> origin/main
             'password' => 'required|string|min:8|confirmed',
         ]);
 

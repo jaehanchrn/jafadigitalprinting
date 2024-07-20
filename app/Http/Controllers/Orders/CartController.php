@@ -55,6 +55,7 @@ class CartController extends Controller
     }
 
     public function deleteItem($id)
+<<<<<<< HEAD
     {
         // Find the item in the cart
         $cartItem = CartItem::findOrFail($id);
@@ -80,6 +81,21 @@ class CartController extends Controller
             'notes' => 'nullable|string',
             'total_price_product' => 'required|numeric',
         ]);
+=======
+{
+    // Lakukan proses penghapusan item berdasarkan $id
+    // Contoh:
+    $item = CartItem::find($id);
+    if (!$item) {
+        return response()->json(['message' => 'Item tidak ditemukan'], 404);
+    }
+
+    $item->delete();
+
+    return response()->json(['message' => 'Item berhasil dihapus']);
+}
+
+>>>>>>> origin/main
 
 
         $cartItem = new CartItem();
