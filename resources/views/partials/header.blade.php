@@ -13,7 +13,7 @@
             </button>
         </div>
 
-
+       
         <div class=" flex-col justify-start items-center inline-flex">
             <div class=" dropdown inline-block relative">
                 <button
@@ -33,7 +33,7 @@
                                 Kantor</a></li>
                         <li class=""><a
                                 class="rounded-b-lg bg-neutral-100 text-blue-500 hover:text-blue-300 py-2 px-4 text-md font-normal font-['Montserrat'] block whitespace-no-wrap"
-                                onclick="window.location.href='/jasa-cetak' ">Jasa Cetak</a>
+                               href="{{ route ('jasa-cetak-foto.index')}}">Jasa Cetak</a>
                         </li>
                     </button>
                 </ul>

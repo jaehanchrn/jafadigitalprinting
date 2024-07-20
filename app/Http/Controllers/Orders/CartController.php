@@ -35,89 +35,70 @@ class CartController extends Controller
     {
         $cart = Cart::where('user_id', Auth::id())->with('items.product')->first();
 
-
-
         if (!$cart) {
             return view('checkout.keranjang', ['cart' => null, 'total_price_product' => 0]);
         }
 
         $total_price_product = $cart->items->sum(function ($item) {
-            return $item->product->price * $item->quantity;
+            if ($item->product) {
+                return $item->product->price * $item->quantity;
+            } elseif ($item->service) {
+                return $item->service->price * $item->quantity;
+            }
+            return 0;
         });
 
         return view('checkout.keranjang', [
-            'cart' => $cart, 
+            'cart' => $cart,
             'total_price_product' => $total_price_product
         ]);
     }
 
+    public function deleteItem($id)
+    {
+        // Find the item in the cart
+        $cartItem = CartItem::findOrFail($id);
+
+        // Check if it's a service item and delete associated service if exists
+        if ($cartItem->service_id) {
+            $cartItem->service()->delete(); // Assuming you have a 'service' relationship defined in CartItem model
+        }
+
+        // Delete the cart item
+        $cartItem->delete();
+
+        return redirect()->back()->with('success', 'Item deleted from cart successfully.');
+    }
+
+    public function addJasaCetakToCart(Request $request)
+    {
+        $validated = $request->validate([
+            'size' => 'required|string',
+            'paper_type' => 'required|string',
+            'quantity' => 'required|integer|min:1', // Correct usage of min validation rule
+            'file' => 'required|file|mimes:jpg,jpeg,png,pdf|max:10240',
+            'notes' => 'nullable|string',
+            'total_price_product' => 'required|numeric',
+        ]);
 
 
+        $cartItem = new CartItem();
+        $cartItem->cart_id = auth()->user()->id; // or session ID if not logged in
+        $cartItem->product_id = null; // null because it's a service, adjust as necessary
+        $cartItem->quantity = $validated['quantity'];
+        $cartItem->size = $validated['size'];
+        $cartItem->paper_type = $validated['paper_type'];
+        $cartItem->notes = $validated['notes'];
+        $cartItem->total_price = $validated['total_price_product'];
 
+        if ($request->hasFile('file')) {
+            $file = $request->file('file');
+            $path = $file->store('public/jasa-cetak'); // Adjust the storage path as needed
+            $cartItem->file_path = $path;
+        }
 
+        $cartItem->save();
 
-
-    //
-    // public function addToCart(Request $request, $id)
-    // {
-    //     // Check if the user is authenticated
-    //     if (!Auth::check()) {
-    //         return redirect()->route('login')->with('error', 'You need to log in first.');
-    //     }
-
-    //     // Find the product by ID
-    //     $product = Product::find($id);
-
-    //     // Check if the product exists
-    //     if (!$product) {
-    //         Log::error('Product not found: ' . $id);
-    //         return redirect()->back()->with('error', 'Product not found.');
-    //     }
-
-    //     // Check if the product is already in the cart for the authenticated user
-    //     $cart = Cart::where('user_id', Auth::id())
-    //                 ->where('product_id', $id)
-    //                 ->first();
-
-    //     if ($cart) {
-    //         // Increment the quantity if the product is already in the cart
-    //         $cart->quantity++;
-    //         $cart->save();
-    //         Log::info('Incremented quantity for product in cart', ['user_id' => Auth::id(), 'product_id' => $id, 'quantity' => $cart->quantity]);
-    //     } else {
-    //         // Create a new cart item if the product is not in the cart
-    //         Cart::create([
-    //             'user_id' => Auth::id(),
-    //             'product_id' => $id,
-    //             'quantity' => 1,
-    //         ]);
-    //         Log::info('Added product to cart', ['user_id' => Auth::id(), 'product_id' => $id]);
-    //     }
-
-    //     return redirect()->route('cart.view')->with('success', 'Product added to cart!');
-    // }
-
-    // public function viewCart()
-    // {
-    //     $cartItems = Cart::where('user_id', Auth::id())
-    //                     ->with('product') // Ensure the product relationship is loaded
-    //                     ->get();
-
-    //     $total_price_product = $cartItems->reduce(function ($carry, $item) {
-    //         return $carry + ($item->product->price * $item->quantity);
-    //     }, 0);
-
-    //     return view('checkout.keranjang', compact('cartItems', 'total_price_product'));
-    // }
-
-    // public function checkout()
-    // {
-    //     // Clear the cart for the authenticated user
-    //     Cart::where('user_id', Auth::id())->delete();
-    //     return redirect()->route('cart.view')->with('success', 'Checkout successful!');
-    // }
-
-
-
-
+        return redirect()->back()->with('success', 'Jasa cetak berhasil ditambahkan ke keranjang!');
+    }
 }

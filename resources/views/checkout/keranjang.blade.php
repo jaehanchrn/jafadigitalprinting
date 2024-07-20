@@ -1,20 +1,5 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    @vite('resources/css/app.css')
-    <script src="https://unpkg.com/@phosphor-icons/web"></script>
-    <title>Laravel</title>
-
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.bunny.net">
-    <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet" />
-
-</head>
-
-<body class="antialiased">
+@extends('layouts.main')
+@section('container')
     <div class="w-full h-fit relative bg-white">
         @include('partials.whatsapp')
         @include('partials.topheader')
@@ -50,58 +35,77 @@
                             @foreach ($cart->items as $item)
                                 <div class="w-full">
                                     <div class="relative flex flex-row justify-start gap-12">
-
                                         <!-- Tombol Aksi -->
                                         <div class="flex">
                                             <div class="flex flex-col justify-center gap-6">
-                                                <button
-                                                    class="ph-bold ph-pencil-simple-line text-3xl text-blue-500 hover:text-blue-400"></button>
-                                                <button
-                                                    class="ph-bold ph-trash text-3xl text-red-500 hover:text-red-300"></button>
+                                                <a href="{{ route('cart.delete', $item->id) }}"
+                                                    onclick="return confirm('Are you sure you want to delete this item?')"
+                                                    class="ph-bold ph-trash text-3xl text-red-500 hover:text-red-300"></a>
                                             </div>
                                         </div>
 
-                                        <!-- Gambar Produk -->
+                                        <!-- Gambar Produk atau Layanan -->
                                         <div class="relative">
                                             <div class="w-[120px] h-[120px]">
-                                                <img class="w-full h-full rounded-xl" src="{{ $item->product->image }}"
-                                                    alt="{{ $item->product->name }}">
+                                                @if ($item->product)
+                                                    <img class="w-full h-full rounded-xl"
+                                                        src="{{ $item->product->image }}"
+                                                        alt="{{ $item->product->name }}">
+                                                @elseif ($item->service)
+                                                    <img class="w-full h-full rounded-xl"
+                                                        src="{{ asset('storage/' . $item->service->print_images) }}"
+                                                        alt="{{ $item->service->print_type }}">
+                                                @endif
                                             </div>
                                         </div>
 
-                                        <!-- Informasi Produk -->
+                                        <!-- Informasi Produk atau Layanan -->
                                         <div class="w-[300px] flex-col flex">
-                                            <!-- Nama Produk -->
-                                            <div class="text-2xl text-blue-500 font-bold font-['montserrat']">
-                                                {{ $item->product->name }}
+                                            <!-- Nama Produk atau Tipe Layanan -->
+                                            <div class="text-2xl text-blue-500 font-bold font-montserrat">
+                                                @if ($item->product)
+                                                    {{ $item->product->name }}
+                                                @elseif ($item->service)
+                                                    Cetak {{ $item->service->print_type }} -
+                                                    {{ $item->service->size }}
+                                                    {{ $item->service->paper_type }}
+                                                @endif
                                             </div>
                                         </div>
 
                                         <!-- Bagian Harga, Jumlah, dan Total Harga -->
                                         <div class="flex flex-col">
                                             <!-- Harga -->
-                                            <div class="text-xl text-neutral-800 font-normal font-['montserrat']">
-                                                Harga : Rp {{ number_format($item->product->price, 0, ',', '.') }}
+                                            <div class="text-xl text-neutral-800 font-normal font-montserrat">
+                                                Harga :
+                                                @if ($item->product)
+                                                    Rp {{ number_format($item->product->price, 0, ',', '.') }}
+                                                @elseif ($item->service)
+                                                    Rp {{ number_format($item->service->price, 0, ',', '.') }}
+                                                @endif
                                             </div>
                                             <!-- Jumlah -->
-                                            <div class="text-xl text-neutral-800 font-normal font-['montserrat']">
+                                            <div class="text-xl text-neutral-800 font-normal font-montserrat">
                                                 Jumlah : {{ $item->quantity }}
                                             </div>
                                             <!-- Total Harga -->
-                                            <div class="text-xl text-neutral-800 font-normal font-['montserrat']">
-                                                Total Harga Pesanan : Rp
-                                                {{ number_format($item->product->price * $item->quantity, 0, ',', '.') }}
+                                            <div class="text-xl text-neutral-800 font-normal font-montserrat">
+                                                Total Harga :
+                                                @if ($item->product)
+                                                    Rp
+                                                    {{ number_format($item->product->price * $item->quantity, 0, ',', '.') }}
+                                                @elseif ($item->service)
+                                                    Rp
+                                                    {{ number_format($item->service->price * $item->quantity, 0, ',', '.') }}
+                                                @endif
                                             </div>
                                         </div>
-
-                                        
                                     </div>
                                 </div>
                             @endforeach
                         </div>
                     </div>
                 </div>
-
             @else
                 <div class="relative w-full px-12 pb-8 ">
                     <div
@@ -109,13 +113,15 @@
                         Mohon maaf, belum ada produk atau jasa yang ditambahkan.
                     </div>
                 </div>
-
             @endif
+
 
             <div class="w-fit flex px-12">
                 <div class="w-full h-fit bg-orange-500 justify-end items-end flex flex-row py-4 px-12 gap-16">
                     <div class="w-fit relative items-start flex flex-col">
-                        <div class="w-full flex text-neutral-50 text-2xl font-bold font-['Montserrat']">Total Harga</div>
+                        <div class="w-full flex text-neutral-50 text-2xl font-bold font-['Montserrat']">Total Harga
+                            Pesanan
+                        </div>
                     </div>
                     <div class="w-fit relative items-start flex flex-col">
                         <div class="w-full text-neutral-50 text-2xl font-bold font-['Montserrat']"> Rp
@@ -146,6 +152,4 @@
             session(['total_price_product' => $total_price_product]);
         @endphp
     </div>
-</body>
-
-</html>
+@endsection

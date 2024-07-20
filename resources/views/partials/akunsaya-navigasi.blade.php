@@ -13,7 +13,7 @@
                 <div class="w-full p-8">
                     <div class="w-full gap-6 flex-col flex">
 
-                        <button onclick="window.location.href='/edit-profil'"
+                        <button onclick="window.location.href='{{ route('profil.edit') }}'"
                             class="self-stretch grow shrink basis-0 px-5 py-2.5 hover:bg-blue-200 justify-center items-center gap-2.5 inline-flex">
                             <div
                                 class="text-center text-blue-500 text-2xl font-normal font-['Montserrat']">
@@ -27,19 +27,19 @@
                         </button>
 
                         @if (auth()->user()->tipe_akun === 'User')
-                            <button onclick="window.location.href='/riwayat-pesanan'"
+                            <a href="{{ route('pesanan.index.history')}}"
                                 class="self-stretch grow shrink basis-0 px-5 py-2.5 hover:bg-blue-200 justify-center items-center gap-2.5 inline-flex">
                                 <div
                                     class="text-center text-blue-500 text-2xl font-normal font-['Montserrat']">
                                     Riwayat Pesanan</div>
-                            </button>
+                            </a>
                         @else
-                            <button onclick="window.location.href='/pesanan-pelanggan'"
+                            <a href="{{ route('pesanan.index')}}"
                                 class="self-stretch grow shrink basis-0 px-5 py-2.5 hover:bg-blue-200 justify-center items-center gap-2.5 inline-flex">
                                 <div
                                     class="text-center text-blue-500 text-2xl font-normal font-['Montserrat']">
                                     Pesanan Customer</div>
-                            </button>
+                            </a>
                         @endif
                         <button onclick="window.location.href='/logout-akun'"
                             class="self-stretch grow shrink basis-0 px-5 py-2.5 hover:bg-blue-200 justify-center items-center gap-2.5 inline-flex">

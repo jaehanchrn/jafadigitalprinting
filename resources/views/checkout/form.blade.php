@@ -1,20 +1,5 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    @vite('resources/css/app.css')
-    <script src="https://unpkg.com/@phosphor-icons/web"></script>
-    <title>Laravel</title>
-
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.bunny.net">
-    <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet" />
-
-</head>
-
-<body class="w-full h-full antialiased">
+@extends('layouts.main')
+@section('container')
 
     <div class="w-full flex-col justify-center items-center flex  ">
         <div class="w-[1000px] h-fit flex-col flex items-center relative bg-neutral-200 rounded-2xl ">
@@ -46,19 +31,20 @@
                         @enderror
                     </div>
 
-                    <!-- Dropdown Pricelist -->
+                    <!-- Dropdown Pricelist - Kota/Kabupaten -->
                     <div class="w-full flex flex-col justify-between items-center">
-                        <div class="w-full bg-neutral-50 px-4 py-2 items-center rounded-lg border border-neutral-500 flex">
+                        <div
+                            class="w-full bg-neutral-50 px-4 py-2 items-center rounded-lg border border-neutral-500 flex">
                             <select name="pricelist_id"
                                 class="text-neutral-800 rounded-lg text-2xl font-normal font-['Montserrat']">
                                 @php
-                                    $previousCity = null;
+                                    $cities = [];
                                 @endphp
                                 @foreach ($pricelists as $pricelist)
-                                    @if ($previousCity !== $pricelist->name_city)
+                                    @if (!in_array($pricelist->name_city, $cities))
                                         <option value="{{ $pricelist->id }}">{{ $pricelist->name_city }}</option>
                                         @php
-                                            $previousCity = $pricelist->name_city;
+                                            $cities[] = $pricelist->name_city;
                                         @endphp
                                     @endif
                                 @endforeach
@@ -71,9 +57,11 @@
                             </div>
                         @enderror
                     </div>
-                    <!-- Dropdown Pricelist -->
+
+                    <!-- Dropdown Pricelist - Kecamatan -->
                     <div class="w-full flex flex-col justify-between items-center">
-                        <div class="w-full bg-neutral-50 px-4 py-2 items-center rounded-lg border border-neutral-500 flex">
+                        <div
+                            class="w-full bg-neutral-50 px-4 py-2 items-center rounded-lg border border-neutral-500 flex">
                             <select name="pricelist_id"
                                 class="text-neutral-800 rounded-lg text-2xl font-normal font-['Montserrat']">
                                 @foreach ($pricelists as $pricelist)
@@ -88,6 +76,7 @@
                             </div>
                         @enderror
                     </div>
+
 
 
                     <!-- Kode Pos -->
@@ -124,6 +113,36 @@
             </div>
         </div>
     </div>
-</body>
+@endsection
 
-</html>
+{{-- <!-- Dropdown Pricelist - Kota/Kabupaten -->
+                    <div class="w-full flex flex-col justify-between items-center">
+                        <div class="w-full bg-neutral-50 px-4 py-2 items-center rounded-lg border border-neutral-500 flex">
+                            <select name="pricelist_city" class="text-neutral-800 rounded-lg text-2xl font-normal font-['Montserrat']">
+                                @foreach ($uniqueCities as $city)
+                                    <option value="{{ $city }}">{{ $city }}</option>
+                                @endforeach
+                            </select>
+                        </div>
+                        @error('pricelist_city')
+                            <div class="w-full text-start text-red-500">
+                                {{ $message }}
+                            </div>
+                        @enderror
+                    </div>
+
+                    <!-- Dropdown Pricelist - Kecamatan -->
+                    <div class="w-full flex flex-col justify-between items-center">
+                        <div class="w-full bg-neutral-50 px-4 py-2 items-center rounded-lg border border-neutral-500 flex">
+                            <select name="pricelist_district" class="text-neutral-800 rounded-lg text-2xl font-normal font-['Montserrat']">
+                                @foreach ($uniqueDistricts as $district)
+                                    <option value="{{ $district }}">{{ $district }}</option>
+                                @endforeach
+                            </select>
+                        </div>
+                        @error('pricelist_district')
+                            <div class="w-full text-start text-red-500">
+                                {{ $message }}
+                            </div>
+                        @enderror
+                    </div> --}}

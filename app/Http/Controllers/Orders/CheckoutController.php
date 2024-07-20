@@ -21,6 +21,22 @@ class CheckoutController extends Controller
         return 10000; // Contoh tarif flat
     }
 
+    private function generateInvoiceNumber()
+    {
+        $prefix = "INV";
+        $date = date('dmy'); // Current date in YYYYMMDD format
+        $latestOrder = Order::latest()->first();
+        
+        if ($latestOrder) {
+            $lastNumber = (int)substr($latestOrder->no_invoice, -4);
+            $newNumber = str_pad($lastNumber + 1, 4, '0', STR_PAD_LEFT);
+        } else {
+            $newNumber = "0001";
+        }
+
+        return $prefix . '/' . $date . '/' . $newNumber;
+    }
+
     public function indexAddress()
     {
         // Retrieve the current user's cart with associated products
@@ -160,17 +176,20 @@ class CheckoutController extends Controller
         if ($request->hasFile('payment_proof')) {
             $file = $request->file('payment_proof');
             $fileName = time() . '_' . $file->getClientOriginalName();
-            $filePath = $file->storeAs('payment_proofs', $fileName);
+            $filePath = $file->store('payment_confirmation', 'public');
+
+            $invoiceNumber = $this->generateInvoiceNumber();
 
             // Save payment confirmation to the database (for example, using Order model)
             $order = new Order();
             $order->user_id = $request->user_id;
-            $order->address = $request->address_id;
+            $order->no_invoice = $invoiceNumber;
+            $order->address_id = $request->address_id;
             $order->shipping_cost = $request->shipping_cost;
             $order->total_price_product = $request->total_price_product;
             $order->total_price_order = $request->total_price_order;
             $order->payment_confirmation_image = $filePath;
-
+            $order->status = 'Proses Verifikasi';
             // Save order to the database
             $order->save();
 
@@ -179,18 +198,25 @@ class CheckoutController extends Controller
 
             if ($cart) {
                 foreach ($cart->items as $item) {
-                    // Add item to OrderItem
-                    OrderItem::create([
-                        'order_id' => $order->id,
-                        'product_id' => $item->product_id,
-                        'quantity' => $item->quantity,
-                        'price' => $item->price,
-                    ]);
+                    if ($item->product) {
+                        OrderItem::create([
+                            'order_id' => $order->id,
+                            'product_id' => $item->product_id,
+                            'quantity' => $item->quantity,
+                            'price' => $item->product->price,
+                        ]);
+                    } elseif ($item->service) {
+                        OrderItem::create([
+                            'order_id' => $order->id,
+                            'service_id' => $item->service_id,
+                            'quantity' => $item->quantity,
+                            'price' => $item->service->price,
+                        ]);
+                    }
                 }
-
-                // Delete all items from the cart
+        
+                // Clear the cart
                 $cart->items()->delete();
-                $cart->delete();
             }
 
             // Redirect to success page or order summary page

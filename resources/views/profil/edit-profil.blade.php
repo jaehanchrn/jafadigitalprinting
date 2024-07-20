@@ -1,20 +1,5 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    @vite('resources/css/app.css')
-    <script src="https://unpkg.com/@phosphor-icons/web"></script>
-    <title>Laravel</title>
-
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.bunny.net">
-    <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet" />
-
-</head>
-
-<body class="antialiased">
+@extends('layouts.main')
+@section('container')
     <div class="w-full h-fit relative bg-white">
 
         @include('partials.topheader')
@@ -49,64 +34,42 @@
                                 </div>
                             </div>
 
-                            <div class="w-full flex flex-col justify-start items-start gap-6">
-
-                                <div class="w-full flex flex-col gap-1">
-                                    {{-- <div class="text-neutral-700 text-2xl font-normal font-['Montserrat']">
-                                            Jenis Bahan</div> --}}
-                                    <div class="flex-col justify-between items-start inline-flex">
-                                        <div
-                                            class="w-full justify-between p-5 bg-neutral-50 rounded-lg border border-neutral-500 items-start inline-flex">
-                                            <div class="text-neutral-700 text-2xl font-normal font-['Montserrat']">
-                                                {{ auth()->user()->namalengkap }}
-                                            </div>
-                                            {{-- <i class="ph-fill ph-caret-down text-neutral-500 text-3xl "></i> --}}
+                            <div class="w-full flex flex-col">
+                                <form action="{{ route('profil.update') }}" method="POST" class="flex flex-col gap-6">
+                                    @csrf
+                            
+                                    <div class="w-full flex flex-col">
+                                        <div class="flex-col justify-between items-start inline-flex">
+                                            <input
+                                                class="w-full font-['Montserrat'] justify-between p-5 bg-neutral-50 text-neutral-700 text-2xl font-normal  rounded-lg border border-neutral-500 items-start inline-flex"
+                                                value="{{ auth()->user()->namalengkap }}" name="namalengkap" id="namalengkap">
                                         </div>
                                     </div>
-                                    {{-- <div class="text-neutral-500 text-l font-normal font-['Montserrat']">
-                                            *maksimal 10 huruf</div> --}}
-                                </div>
-
-                                <div class="w-full flex flex-col gap-1">
-                                    {{-- <div class="text-neutral-700 text-2xl font-normal font-['Montserrat']">
-                                            Jenis Bahan</div> --}}
-                                    <div class="flex-col justify-between items-start inline-flex">
-                                        <div
-                                            class="w-full justify-between p-5 bg-neutral-50 rounded-lg border border-neutral-500 items-start inline-flex">
-                                            <div class="text-neutral-700 text-2xl font-normal font-['Montserrat']">
-                                                {{ auth()->user()->nomor_telepon }}
-                                            </div>
-                                            {{-- <button class="ph-fill ph-calendar-blank text-neutral-700 text-3xl "></button> --}}
+                            
+                                    <div class="w-full flex flex-col">
+                                        <div class="flex-col justify-between items-start inline-flex">
+                                            <input
+                                                class="w-full font-['Montserrat'] justify-between p-5 bg-neutral-50 text-neutral-700 text-2xl font-normal  rounded-lg border border-neutral-500 items-start inline-flex"
+                                                value="{{ auth()->user()->nomor_telepon }}" name="nomor_telepon" id="nomor_telepon">
                                         </div>
                                     </div>
-                                    {{-- <div class="text-neutral-500 text-l font-normal font-['Montserrat']">
-                                            *maksimal 10 huruf</div> --}}
-                                </div>
-
-                                <div class="w-full flex flex-col gap-1">
-                                    {{-- <div class="text-neutral-700 text-2xl font-normal font-['Montserrat']">
-                                            Jenis Bahan</div> --}}
-                                    <div class="flex-col justify-between items-start inline-flex">
-                                        <div
-                                            class="w-full justify-between p-5 bg-neutral-200 rounded-lg border border-neutral-500 items-start inline-flex">
-                                            <div class="text-neutral-400 text-2xl font-normal font-['Montserrat']">
-                                                {{ auth()->user()->email }}
-                                            </div>
-                                            {{-- <button class="ph-fill ph-calendar-blank text-neutral-700 text-3xl "></button> --}}
+                            
+                                    <div class="w-full flex flex-col">
+                                        <div class="flex-col justify-between items-start inline-flex">
+                                            <input
+                                                class="w-full font-['Montserrat']  p-5 bg-neutral-400 text-neutral-700 text-2xl font-normal  rounded-lg inline-flex"
+                                                value="{{ auth()->user()->email }}" name="email" id="email" readonly>
                                         </div>
                                     </div>
-                                    {{-- <div class="text-neutral-500 text-l font-normal font-['Montserrat']">
-                                            *maksimal 10 huruf</div> --}}
-                                </div>
-
-                            </div>
-
-                            <div class="w-full justify-start flex">
-                                <button class="px-7 py-4  bg-blue-500 rounded-[10px] inline-flex hover:opacity-75">
-                                    <div class=" text-neutral-50 text-2xl font-normal font-['Montserrat']">
-                                        Simpan
+                            
+                                    <div class="w-full justify-start flex">
+                                        <button type="submit" class="px-7 py-4  bg-blue-500 rounded-[10px] inline-flex hover:opacity-75">
+                                            <div class=" text-neutral-50 text-2xl font-normal font-['Montserrat']">
+                                                Simpan
+                                            </div>
+                                        </button>
                                     </div>
-                                </button>
+                                </form>
                             </div>
 
                         </div>
@@ -127,7 +90,4 @@
 
     </div>
 
-</body>
-
-
-</html>
+@endsection

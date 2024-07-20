@@ -1,26 +1,17 @@
 <?php
 
-use App\Models\Product\AlatTulis;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\Orders\CartController;
-use App\Http\Controllers\JasaCetak\OrderController;
-use App\Http\Controllers\Orders\AddressUserController;
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\PasswordController;
+use App\Http\Controllers\JasaCetakController; // Updated Controller
+use App\Http\Controllers\Orders\OrderController;
 use App\Http\Controllers\Orders\CheckoutController;
+use App\Http\Controllers\Orders\AddressUserController;
+use App\Http\Controllers\Orders\CartController;
 use App\Http\Controllers\Product\AlatTulisController;
-use App\Http\Controllers\Product\JasaTulisController;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider and all of them will
-| be assigned to the "web" middleware group. Make something great!
-|
-*/
 
-//akun
+
 
 Route::namespace('App\Http\Controllers\Auth')->group(function () {
     Route::get('profil.login-akun', 'LoginController@index')->name('auth.masuk.index');
@@ -31,45 +22,54 @@ Route::namespace('App\Http\Controllers\Auth')->group(function () {
     Route::post('profil.daftar_akun', 'RegisterController@register')->name('auth.daftar.register');
 });
 
-
-//TIDAK TAHU
-
 Route::namespace('App\Http\Controllers')->group(function () {
     Route::get('/', 'HomeController@index')->name('beranda.index');
     Route::get('beranda', 'HomeController@index')->name('beranda.index');
 });
 
+Route::get('/jasa-cetak', 'App\Http\Controllers\JasaController@index')->name('jasa.index');
+
 Route::middleware(['auth'])->group(function () {
+    Route::get('/jasa-cetak-foto', [JasaCetakController::class, 'indexFoto'])->name('jasa-cetak-foto.index'); // Updated Route
+    Route::get('/jasa-cetak-sertifikat', [JasaCetakController::class, 'indexSertifikat'])->name('jasa-cetak-sertifikat.index'); // Updated Route
+    Route::get('/jasa-cetak-kartu-nama', [JasaCetakController::class, 'indexKartuNama'])->name('jasa-cetak-kartu-nama.index'); // Updated Route
+
+    Route::post('/orders/jasaCetak/store', [JasaCetakController::class, 'addJasaCetakToCart'])->name('jasa-cetak.addToCart.store'); // Updated Route
+
 
     Route::prefix('alat-tulis')->group(function () {
         Route::get('/', [AlatTulisController::class, 'beranda'])->name('alat-tulis.index');
         Route::post('/create', [AlatTulisController::class, 'beranda'])->name('alat-tulis.index');
     });
 
-    Route::get('/orders', [OrderController::class, 'beranda'])->name('orders.index');
-    Route::get('/orders/create', [OrderController::class, 'create'])->name('orders.create');
-    Route::post('/orders', [OrderController::class, 'store'])->name('orders.store');
-    Route::get('/orders/{order}', [OrderController::class, 'show'])->name('orders.show');
+    Route::get('/akun/pesanan', [OrderController::class, 'index'])->name('pesanan.index');
+    Route::put('/akun/pesanan/update/{id}', [OrderController::class, 'update'])->name('pesanan.update');
+    Route::get('/akun/pesanan/{id}', [OrderController::class, 'showDetail'])->name('pesanan.detail');
 
+
+    Route::get('/akun/riwayat-pesanan', [OrderController::class, 'indexOrderHistory'])->name('pesanan.index.history');
+    Route::get('/akun/riwayat-pesanan-detail/{id}', [OrderController::class, 'indexOrderHistoryDetail'])->name('pesanan.index.history.detail');
+    Route::post('akun/riwayat-pesanan/{id}/cancel', [OrderController::class, 'cancelOrder'])
+        ->name('order.cancel');
 
 
     Route::prefix('cart')->group(function () {
-        Route::get('/', [CartController::class, 'viewCart'])->name('cart.view');
-        Route::post('add/{id}', [CartController::class, 'addToCart'])->name('cart.addToCart');
-    
+        Route::get('/', [CartController::class, 'viewCart'])->name('cart.view'); // Updated Route
+        Route::post('add/{id}', [CartController::class, 'addToCart'])->name('cart.addToCart'); // Updated Route
+        Route::get('/cart/delete/{id}', [CartController::class, 'deleteItem'])->name('cart.delete'); // Updated Route
+
+        Route::delete('address/{id}', [AddressUserController::class, 'destroy'])->name('checkout.address.destroy');
+
         Route::prefix('checkout')->group(function () {
             Route::get('address', [CheckoutController::class, 'indexAddress'])->name('checkout.address.index');
             Route::get('address/form', [CheckoutController::class, 'form'])->name('checkout.address.form');
             Route::post('address/form/save', [CheckoutController::class, 'saveAddress'])->name('checkout.address.form.save');
             Route::post('address/select-address', [CheckoutController::class, 'selectAddress'])->name('checkout.address.select');
-            
+            Route::delete('address/{id}', [AddressUserController::class, 'destroy'])->name('checkout.address.destroy');
             Route::get('payment', [CheckoutController::class, 'indexPayment'])->name('checkout.payment');
             Route::post('payment/confirm', [CheckoutController::class, 'confirmPayment'])->name('checkout.payment.confirm');
         });
     });
-
-    // Route::post('orders/create', [OrderController::class, 'createOrder'])->name('orders.create');
-    // Route::get('orders/{orderId}', [OrderController::class, 'showOrder'])->name('orders.show');
 });
 
 Route::get('/daftar-akun', function () {
@@ -84,39 +84,29 @@ Route::get('/logout-akun', function () {
     return view('profil.logout-akun');
 });
 
-
-
-//produk dan jasa   
 Route::get('/jasa-ketik', function () {
     return view('produk.jasa-ketik');
 });
 
 
-Route::get('/jasa-cetak', function () {
-    return view('produk.jasa-cetak');
-});
+Route::get('/ubah-password', function () {
+    return view('profil.ubah-password');
+})->name('password.edit');
 
-//profil
+Route::put('/password/update', [PasswordController::class, 'update'])->name('password.update');
+Route::post('/password/update', [PasswordController::class, 'update'])->name('password.update');
 
-Route::get('/edit-profil', function () {
-    return view('profil.edit-profil');
+Route::middleware('auth')->group(function () {
+    Route::get('/profil/edit', [UserController::class, 'edit'])->name('profil.edit');
+    Route::post('/profil/update', [UserController::class, 'update'])->name('profil.update');
+    Route::post('/password/update', [PasswordController::class, 'update'])->name('password.update');
 });
 
 Route::get('/ubah-password', function () {
     return view('profil.ubah-password');
 });
 
-Route::get('/riwayat-pesanan', function () {
-    return view('profil.riwayat-pesanan');
-});
 
-Route::get('/pesanan-pelanggan', function () {
-    return view('profil.pesanan-pelanggan');
-});
-
-
-
-//header
 
 Route::namespace('App\Http\Controllers')->group(function () {
     Route::get('beranda', 'HomeController@index')->name('beranda.index');
@@ -130,16 +120,6 @@ Route::get('/tentangkami', function () {
     return view('tentangkami');
 });
 
-
-
-//cart pesanan dan order
-
-
-
-
-Route::get('/detailpesanan', function () {
-    return view('detailpesanan');
-});
 
 Route::get('/jarakantar', function () {
     return view('jarakantar');

@@ -14,8 +14,10 @@ return new class extends Migration
         Schema::create('cart_items', function (Blueprint $table) {
             $table->id();
             $table->foreignId('cart_id')->constrained()->onDelete('cascade');
-            $table->foreignId('product_id')->constrained()->onDelete('cascade');
+            $table->foreignId('product_id')->nullable();
+            $table->foreignId('service_id')->nullable();
             $table->integer('quantity');
+            $table->decimal('price', 10, 2)->nullable();
             $table->timestamps();
         });
     }

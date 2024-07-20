@@ -28,7 +28,7 @@
 
         @auth
         <div class="w-fit h-fit justify-center items-center flex">
-            <button onclick="window.location.href='/edit-profil'"
+            <button onclick="window.location.href='{{ route('profil.edit') }}'"
                 class="text-center text-nowrap text-blue-500 hover:text-blue-400  text-xl font-normal font-['Montserrat'] underline">
                 Akun Profil
         </button>

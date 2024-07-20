@@ -14,11 +14,13 @@ class CreateOrdersTable extends Migration
         Schema::create('orders', function (Blueprint $table) {
             $table->id();
             $table->foreignId('user_id')->constrained()->onDelete('cascade');
-            $table->string('address')->nullable();
+            $table->text('no_invoice');
+            $table->string('address_id')->nullable();
             $table->decimal('shipping_cost', 8, 2)->nullable();
             $table->decimal('total_price_product', 8, 2)->nullable();
             $table->decimal('total_price_order', 8, 2)->nullable();
             $table->string('payment_confirmation_image')->nullable();
+            $table->string('status');
             $table->timestamps();
         });
     }

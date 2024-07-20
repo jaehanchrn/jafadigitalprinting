@@ -27,4 +27,5 @@ class AddressUser extends Model
     {
         return $this->belongsTo(Pricelist::class);
     }
+    
 }
