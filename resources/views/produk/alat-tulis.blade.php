@@ -121,32 +121,39 @@
                                         <input type="hidden" name="product_id" value="{{ $product->id }}">
                                         <img class="w-72 h-fit rounded-tr-lg rounded-tl-lg" src="{{ url($product->image) }}"
                                             alt="{{ $product->name }}">
-                                           
-                                            <div class="w-72 py-6 bg-neutral-100 px-6 ">
+
+                                        <div class="w-72 py-6 bg-neutral-100 px-6 ">
                                             <div class="w-full text-blue-500 text-xl font-bold font-['Montserrat'] pb-2">
                                                 {{ $product->name }}</div>
                                             <div class="w-full text-blue-300 text-l font-bold font-['Montserrat'] pb-2">
                                                 Rp
                                                 {{ number_format($product->price, 0, ',', '.') }}/pack</div>
-
+                                            @auth
                                                 @if (auth()->user()->tipe_akun === 'User')
-                                            <div
-                                                class="w-full text-center font-normal text-neutral-800 font-['Montserrat'] text-sm flex flex-row gap-4 items-center">
-                                                Jumlah
-                                                <input type="number" name="quantity" id="quantity"
-                                                    class="w-full font-bold font-['Montserrat'] py-1 text-l text-neutral-800 border-blue-500 border-2 bg-neutral-50 text-center rounded mt-1 "
-                                                    min="1" value="1" required>
-                                            </div>
-                                            @endif
+                                                    <div
+                                                        class="w-full text-center font-normal text-neutral-800 font-['Montserrat'] text-sm flex flex-row gap-4 items-center">
+                                                        Jumlah
+                                                        <input type="number" name="quantity" id="quantity"
+                                                            class="w-full font-bold font-['Montserrat'] py-1 text-l text-neutral-800 border-blue-500 border-2 bg-neutral-50 text-center rounded mt-1 "
+                                                            min="1" value="1" required>
+                                                    </div>
+                                                @endif
+                                            @endauth
                                         </div>
-                                        
-                                        @if (auth()->user()->tipe_akun === 'User')
-                                            <button type="submit"
+                                        @auth
+                                            @if (auth()->user()->tipe_akun === 'User')
+                                                <button type="submit"
+                                                    class="w-72 h-fit py-2 hover:opacity-80 bg-blue-500 text-neutral-50 font-normal font-['Montserrat'] rounded-bl-lg rounded-br-lg justify-center items-center flex">
+                                                    Tambah ke Keranjang
+                                                </button>
+                                            @endif
+                                        @endauth
+                                        @guest
+                                            <a type="submit" href="{{ route('auth.masuk.index') }}"
                                                 class="w-72 h-fit py-2 hover:opacity-80 bg-blue-500 text-neutral-50 font-normal font-['Montserrat'] rounded-bl-lg rounded-br-lg justify-center items-center flex">
                                                 Tambah ke Keranjang
-                                            </button>
-                                        @endif
-
+                                            </a>
+                                        @endguest
                                     </form>
                                 </div>
                             @endforeach

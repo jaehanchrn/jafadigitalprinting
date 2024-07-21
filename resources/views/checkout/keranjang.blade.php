@@ -152,36 +152,4 @@
             session(['total_price_product' => $total_price_product]);
         @endphp
     </div>
-<<<<<<< HEAD
 @endsection
-=======
-
-    <!-- Include jQuery -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
-    <!-- Script untuk penghapusan item -->
-    <script>
-        function deleteItem(itemId) {
-            if (confirm('Apakah Anda yakin ingin menghapus item ini?')) {
-                $.ajax({
-                    url: '/cart/delete/' + itemId, // Ganti dengan route yang sesuai untuk penghapusan
-                    type: 'DELETE',
-                    headers: {
-                        'X-CSRF-TOKEN': '{{ csrf_token() }}'
-                    },
-                    success: function(response) {
-                        console.log('Item berhasil dihapus');
-                        // Refresh halaman setelah penghapusan berhasil
-                        location.reload();
-                    },
-                    error: function(err) {
-                        console.error('Gagal menghapus item', err);
-                    }
-                });
-            }
-        }
-    </script>
-</body>
-
-</html>
->>>>>>> origin/main

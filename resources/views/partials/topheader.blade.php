@@ -22,24 +22,23 @@
     </div>
 
     <div class="w-fit h-fit flex flex-row gap-20">
-        @if (auth()->user()->tipe_akun === 'User')
-            <button onclick="window.location.href='/cart'">
-                <i class="ph-bold text-blue-500 hover:text-blue-400 ph-shopping-cart text-3xl"></i>
-            </button>
-        @endif
-
-
         @auth
+            @if (auth()->user()->tipe_akun === 'User')
+                <button onclick="window.location.href='/cart'">
+                    <i class="ph-bold text-blue-500 hover:text-blue-400 ph-shopping-cart text-3xl"></i>
+                </button>
+            @endif
             <div class="w-fit h-fit justify-center items-center flex">
                 <button onclick="window.location.href='{{ route('profil.edit') }}'"
                     class="text-center text-nowrap text-blue-500 hover:text-blue-400  text-xl font-normal font-['Montserrat'] underline">
                     Akun Profil
                 </button>
             </div>
-
         @endauth
-
         @guest
+            <button onclick="window.location.href='/cart'">
+                <i class="ph-bold text-blue-500 hover:text-blue-400 ph-shopping-cart text-3xl"></i>
+            </button>
             <div class="w-fit h-fit justify-center items-center flex">
                 <button onclick="window.location.href='login-akun'"
                     class="text-center text-nowrap text-blue-500 hover:text-blue-400  text-xl font-normal font-['Montserrat'] underline">

@@ -30,17 +30,6 @@ Route::namespace('App\Http\Controllers')->group(function () {
 Route::get('/jasa-cetak', 'App\Http\Controllers\JasaController@index')->name('jasa.index');
 
 Route::middleware(['auth'])->group(function () {
-    Route::get('/jasa-cetak-foto', [JasaCetakController::class, 'indexFoto'])->name('jasa-cetak-foto.index'); // Updated Route
-    Route::get('/jasa-cetak-sertifikat', [JasaCetakController::class, 'indexSertifikat'])->name('jasa-cetak-sertifikat.index'); // Updated Route
-    Route::get('/jasa-cetak-kartu-nama', [JasaCetakController::class, 'indexKartuNama'])->name('jasa-cetak-kartu-nama.index'); // Updated Route
-
-    Route::post('/orders/jasaCetak/store', [JasaCetakController::class, 'addJasaCetakToCart'])->name('jasa-cetak.addToCart.store'); // Updated Route
-
-
-    Route::prefix('alat-tulis')->group(function () {
-        Route::get('/', [AlatTulisController::class, 'beranda'])->name('alat-tulis.index');
-        Route::post('/create', [AlatTulisController::class, 'beranda'])->name('alat-tulis.index');
-    });
 
     Route::get('/akun/pesanan', [OrderController::class, 'index'])->name('pesanan.index');
     Route::put('/akun/pesanan/update/{id}', [OrderController::class, 'update'])->name('pesanan.update');
@@ -71,6 +60,20 @@ Route::middleware(['auth'])->group(function () {
         });
     });
 });
+
+
+Route::get('/jasa-cetak-foto', [JasaCetakController::class, 'indexFoto'])->name('jasa-cetak-foto.index'); // Updated Route
+Route::get('/jasa-cetak-sertifikat', [JasaCetakController::class, 'indexSertifikat'])->name('jasa-cetak-sertifikat.index'); // Updated Route
+Route::get('/jasa-cetak-kartu-nama', [JasaCetakController::class, 'indexKartuNama'])->name('jasa-cetak-kartu-nama.index'); // Updated Route
+
+Route::post('/orders/jasaCetak/store', [JasaCetakController::class, 'addJasaCetakToCart'])->name('jasa-cetak.addToCart.store'); // Updated Route
+
+
+Route::prefix('alat-tulis')->group(function () {
+    Route::get('/', [AlatTulisController::class, 'beranda'])->name('alat-tulis.index');
+    Route::post('/create', [AlatTulisController::class, 'beranda'])->name('alat-tulis.index');
+});
+
 
 Route::get('/daftar-akun', function () {
     return view('profil.daftar-akun');
