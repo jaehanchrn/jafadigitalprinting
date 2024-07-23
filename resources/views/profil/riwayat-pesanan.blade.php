@@ -170,9 +170,9 @@
                                                         Pesanan</a>
 
                                                     <button
-                                                        class="px-5 py-3 bg-blue-500 rounded-[10px] inline-flex hover:opacity-75">
+                                                        class="px-5 py-3 bg-blue-500 rounded-[10px] inline-flex hover:opacity-75" onclick="window.location.href='https:/wa.me/6281317554872'">
                                                         <div
-                                                            class="text-neutral-100  text-nowrap text-xl font-normal font-['Montserrat']">
+                                                            class="text-neutral-100  text-nowrap text-xl font-normal font-['Montserrat'] ">
                                                             Chat Kami</div>
                                                     </button>
                                                 </div>

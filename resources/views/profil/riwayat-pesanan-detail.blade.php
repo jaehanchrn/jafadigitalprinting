@@ -24,7 +24,7 @@
                     <div class="w-full h-fit justify-between items-center flex relative rounded-tr-2xl rounded-tl-2xl">
                         <img class="w-32 h-fit" src="{{ url('pictures/logo-jafa-warna.png') }}" />
                         <div class="text-3xl text-blue-500 font-normal font-['Montserrat']">DETAIL PESANAN</div>
-                        <i class="ph-bold ph-x text-3xl text-neutral-500"></i>
+                        <a href="{{ route('pesanan.index.history') }}" class="ph-bold ph-x text-3xl text-neutral-500"></a>
                     </div>
 
                     <div class="w-full rounded-full border-2 border-neutral-200 items-start inline-flex"></div>
