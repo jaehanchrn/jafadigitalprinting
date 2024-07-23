@@ -99,10 +99,10 @@
 
                                         <div class="w-full flex justify-end gap-6">
                                             <!-- Ubah Alamat/Pilih Alamat -->
-                                            <button onclick="window.location.href='/'"
+                                            {{-- <button onclick="window.location.href='/'"
                                                 class="text-blue-500 hover:text-blue-400 text-l font-normal font-['Montserrat'] underline pb-2">
                                                 Ubah Alamat
-                                            </button>
+                                            </button> --}}
                                             <button type="submit" name="address_id" value="{{ $address->id }}"
                                                 class="font-bold text-neutral-50 hover:opacity-80 font-['Montserrat'] px-6 py-2 rounded-md bg-blue-500 "
                                                 data-shipping-cost="{{ $address->pricelist->price }} ">Pilih
