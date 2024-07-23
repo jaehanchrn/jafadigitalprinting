@@ -26,7 +26,7 @@
                     </div>
 
                     <div
-                        class="w-full flex-col flex relative justify-start items-start text-neutral-800  text-3xl font-bold font-['Montserrat']">
+                        class="w-full flex-col flex relative justify-start items-start text-neutral-800  text-3xl font-bold font-['Montserrat'] gap-6">
 
                         <table
                         class=" w-full border-separate border-2 border-spacing-y-2 table-fixed text-xl font-normal font-['Montserrat'] text-neutral-800">
@@ -162,6 +162,10 @@
 
                         </tbody>
                     </table>
+
+                    <div class="w-full relative  text-lg font-bold font-['Montserrat'] text-neutral-800  ">
+                        *Pengiriman akan dilakukan maksimal pada pukul 3 sore. Jika checkout pesanan dilakukan setelah pukul 3 sore, maka pengiriman akan dilakukan pada hari berikutnya.
+                    </div>
 
                     </div>
 

@@ -263,10 +263,10 @@
                 </div>
 
                 <div class="w-full flex flex-col justify-end items-end relative">
-                    <button
+                    <a
                         class="text-blue-500 text-xl font-bold hover:text-blue-300 font-['Montserrat'] underline" 
-                        onclick="window.location.href='/jasa-cetak'">Jasa
-                        Cetak Lainnya...</button>
+                        href="{{ route('jasa-cetak-foto.index') }}"> Jasa
+                        Cetak Lainnya...</a>
                 </div>
             </div>
 
